@@ -9,7 +9,7 @@ python tools/train.py config/meshrcnn_r50_fpn_1x.py
 
 or
 
-bash tools/dist.sh config/meshrcnn_r50_fpn_1x.py
+bash tools/dist.sh config/meshrcnn_r50_fpn_1x.py 4
 
 ```
 
