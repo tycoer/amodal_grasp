@@ -1,0 +1,945 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5b005a50-a8e8-4f3b-b295-6db11774974d" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="graspnet-baseline-main">
+      <favorite_root url="file://D:/Pycharm/system/remote_sources/-430842387/184872619/mmdet/models/roi_heads/standard_roi_head.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+    </favorites_list>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="29jcnfDoQGjFoyMJpyOHIm1ZvZt" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\project\graspnet-baseline-main\amodal_grasp\models\utils" />
+      <recent name="G:\project\graspnet-baseline-main\amodal_grasp\models" />
+      <recent name="G:\project\graspnet-baseline-main\amodal_grasp\configs" />
+      <recent name="G:\project\graspnet-baseline-main\amodal_grasp\dataset" />
+      <recent name="G:\project\graspnet-baseline-main\amodal_grasp\scripts\pybullet" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\project\graspnet-baseline-main\amodal_grasp\scripts\pybullet" />
+      <recent name="G:\project\graspnet-baseline-main\amodal_grasp\tools" />
+      <recent name="G:\project\graspnet-baseline-main\amodal_grasp\dataset" />
+      <recent name="G:\project\graspnet-baseline-main\my_test" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.train_pybullet">
+    <configuration name="check_mesh" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="graspnet-baseline-main" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/amodal_grasp/scripts/pybullet" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/amodal_grasp/scripts/pybullet/check_mesh.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="generate_pybullet_scene" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="graspnet-baseline-main" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name=" DISPLAY" value="localhost:10.0" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/amodal_grasp" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="G:\project\graspnet-baseline-main\amodal_grasp\scripts\pybullet\generate_pybullet_scene.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python">
+      <module name="graspnet-baseline-main" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DISPLAY" value="localhost:10.0" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/amodal_grasp" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/amodal_grasp/tools/test.py" />
+      <option name="PARAMETERS" value="configs/amodal_grasp_cfg.py /home/hanyang/graspnet-baseline-main/work_dirs/amodal_grasp_cfg/epoch_12.pth --show-dir ./show" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test_dataset" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="graspnet-baseline-main" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/amodal_grasp/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/amodal_grasp/test/test_dataset.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test_dataset_offical" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="graspnet-baseline-main" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DISPLAY" value="localhost:10.0" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/my_test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/my_test/test_dataset_offical.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test_model" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="graspnet-baseline-main" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/amodal_grasp" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/amodal_grasp/test/test_model.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test_voxel_head" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="graspnet-baseline-main" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/amodal_grasp/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/amodal_grasp/test/test_voxel_head.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="train (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="graspnet-baseline-main" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/amodal_grasp/tools" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/amodal_grasp/tools/train.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="train" type="PythonConfigurationType" factoryName="Python">
+      <module name="graspnet-baseline-main" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="amodal_grasp/tools/train.py" />
+      <option name="PARAMETERS" value="amodal_grasp/configs/amodal_grasp_cfg.py --gpu-id 2" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="train_coco" type="PythonConfigurationType" factoryName="Python">
+      <module name="graspnet-baseline-main" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="amodal_grasp/tools/train.py" />
+      <option name="PARAMETERS" value="amodal_grasp/configs/coco.py" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="train_pybullet" type="PythonConfigurationType" factoryName="Python">
+      <module name="graspnet-baseline-main" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="amodal_grasp/tools/train.py" />
+      <option name="PARAMETERS" value="amodal_grasp/configs/amodal_grasp_pybullet_cfg.py --gpu-id 2 --seed 2" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="voxel_head" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="graspnet-baseline-main" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/amodal_grasp/models/voxel_head.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.test_dataset_offical" />
+      <item itemvalue="Python.test" />
+      <item itemvalue="Python.train" />
+      <item itemvalue="Python.train_pybullet" />
+      <item itemvalue="Python.train_coco" />
+      <item itemvalue="Python.test_dataset" />
+      <item itemvalue="Python.generate_pybullet_scene" />
+      <item itemvalue="Python.check_mesh" />
+      <item itemvalue="Python.voxel_head" />
+      <item itemvalue="Python.test_voxel_head" />
+      <item itemvalue="Python.test_model" />
+      <item itemvalue="Python.train (1)" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.train (1)" />
+        <item itemvalue="Python.test_model" />
+        <item itemvalue="Python.test_voxel_head" />
+        <item itemvalue="Python.voxel_head" />
+        <item itemvalue="Python.check_mesh" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="StructureViewFactory">
+    <option name="ACTIVE_ACTIONS" value=",SHOW_FIELDS" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5b005a50-a8e8-4f3b-b295-6db11774974d" name="Default Changelist" comment="" />
+      <created>1653630103678</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1653630103678</updated>
+      <workItem from="1653630106535" duration="22243000" />
+      <workItem from="1653706104243" duration="29277000" />
+      <workItem from="1653790084465" duration="7782000" />
+      <workItem from="1653812582583" duration="17236000" />
+      <workItem from="1653876605521" duration="18846000" />
+      <workItem from="1653964043321" duration="19418000" />
+      <workItem from="1654051363985" duration="37458000" />
+      <workItem from="1654133894354" duration="23545000" />
+      <workItem from="1654233900715" duration="374000" />
+      <workItem from="1654234290945" duration="14188000" />
+      <workItem from="1654310461824" duration="1085000" />
+      <workItem from="1654311576066" duration="26765000" />
+      <workItem from="1654354433419" duration="778000" />
+      <workItem from="1654396924504" duration="4822000" />
+      <workItem from="1654407930085" duration="19522000" />
+      <workItem from="1654478748203" duration="43523000" />
+      <workItem from="1654567245774" duration="7511000" />
+      <workItem from="1654596140571" duration="4803000" />
+      <workItem from="1654663415877" duration="33340000" />
+      <workItem from="1654856682927" duration="6921000" />
+      <workItem from="1654915233230" duration="7603000" />
+      <workItem from="1654928220221" duration="5187000" />
+      <workItem from="1654939768045" duration="2886000" />
+      <workItem from="1654942711777" duration="3993000" />
+      <workItem from="1655000334653" duration="26007000" />
+      <workItem from="1655084149529" duration="15724000" />
+      <workItem from="1655110193047" duration="31370000" />
+      <workItem from="1655253606832" duration="37641000" />
+      <workItem from="1655342836537" duration="4452000" />
+      <workItem from="1655514685853" duration="1465000" />
+      <workItem from="1655517093249" duration="7280000" />
+      <workItem from="1655601348799" duration="612000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="361" y="74" key="#Deployment" timestamp="1655527627258">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="74" key="#Deployment/0.0.1536.824@0.0.1536.824" timestamp="1655527627258" />
+    <state x="361" y="74" key="#Options" timestamp="1654425988324">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="74" key="#Options/0.0.1536.824@0.0.1536.824" timestamp="1654425988324" />
+    <state x="234" y="82" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1655525991566">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="234" y="82" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1655525991566" />
+    <state x="514" y="221" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1653790195487">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="514" y="221" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1653790195487" />
+    <state width="1534" height="440" key="DebuggerActiveHint" timestamp="1654443003018">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1534" height="440" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1654443003018" />
+    <state x="549" y="170" key="FileChooserDialogImpl" timestamp="1655520549625">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1655520549625" />
+    <state width="1493" height="266" key="GridCell.Tab.-1.bottom" timestamp="1654515472429">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="266" key="GridCell.Tab.-1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1654515472429" />
+    <state width="1493" height="266" key="GridCell.Tab.-1.center" timestamp="1654515472429">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="266" key="GridCell.Tab.-1.center/0.0.1536.824@0.0.1536.824" timestamp="1654515472429" />
+    <state width="1493" height="266" key="GridCell.Tab.-1.left" timestamp="1654515472429">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="266" key="GridCell.Tab.-1.left/0.0.1536.824@0.0.1536.824" timestamp="1654515472428" />
+    <state width="1493" height="266" key="GridCell.Tab.-1.right" timestamp="1654515472429">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="266" key="GridCell.Tab.-1.right/0.0.1536.824@0.0.1536.824" timestamp="1654515472429" />
+    <state width="1151" height="105" key="GridCell.Tab.0.bottom" timestamp="1655528575036">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1151" height="105" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1655528575036" />
+    <state width="1151" height="105" key="GridCell.Tab.0.center" timestamp="1655528575036">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1151" height="105" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1655528575036" />
+    <state width="1151" height="105" key="GridCell.Tab.0.left" timestamp="1655528575035">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1151" height="105" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1655528575035" />
+    <state width="1151" height="105" key="GridCell.Tab.0.right" timestamp="1655528575036">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1151" height="105" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1655528575036" />
+    <state width="1148" height="413" key="GridCell.Tab.1.bottom" timestamp="1655367243302">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1148" height="413" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1655367243302" />
+    <state width="1148" height="413" key="GridCell.Tab.1.center" timestamp="1655367243302">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1148" height="413" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1655367243302" />
+    <state width="1148" height="413" key="GridCell.Tab.1.left" timestamp="1655367243302">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1148" height="413" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1655367243302" />
+    <state width="1148" height="413" key="GridCell.Tab.1.right" timestamp="1655367243302">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1148" height="413" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1655367243302" />
+    <state width="1464" height="238" key="GridCell.Tab.2.bottom" timestamp="1654515473517">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1464" height="238" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1654515473517" />
+    <state width="1464" height="238" key="GridCell.Tab.2.center" timestamp="1654515473517">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1464" height="238" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1654515473517" />
+    <state width="1464" height="238" key="GridCell.Tab.2.left" timestamp="1654515473517">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1464" height="238" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1654515473517" />
+    <state width="1464" height="238" key="GridCell.Tab.2.right" timestamp="1654515473517">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1464" height="238" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1654515473517" />
+    <state x="583" y="149" key="PyMappingSimpleResolveDialog" timestamp="1653727072699">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="583" y="149" key="PyMappingSimpleResolveDialog/0.0.1536.824@0.0.1536.824" timestamp="1653727072699" />
+    <state x="272" y="57" key="SettingsEditor" timestamp="1655527581732">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="272" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1655527581732" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1655098870329">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/0.0.1536.824@0.0.1536.824" timestamp="1655098870329" />
+    <state width="775" height="419" key="XDebugger.FullValuePopup" timestamp="1653896218974">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="775" height="419" key="XDebugger.FullValuePopup/0.0.1536.824@0.0.1536.824" timestamp="1653896218974" />
+    <state x="286" y="120" key="com.intellij.execution.console.ConsoleHistoryController$MyBrowseAction$1" timestamp="1655024525134">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="286" y="120" key="com.intellij.execution.console.ConsoleHistoryController$MyBrowseAction$1/0.0.1536.824@0.0.1536.824" timestamp="1655024525134" />
+    <state x="316" y="151" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1655291452760">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="316" y="151" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" timestamp="1655291452760" />
+    <state x="510" y="145" key="com.jetbrains.plugins.remotesdk.ui.RemoteMappingsConfiguration" timestamp="1655527581208">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="510" y="145" key="com.jetbrains.plugins.remotesdk.ui.RemoteMappingsConfiguration/0.0.1536.824@0.0.1536.824" timestamp="1655527581208" />
+    <state x="72" y="0" width="1478" height="303" key="dock-window-1" timestamp="1654515482104">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="72" y="0" width="1478" height="303" key="dock-window-1/0.0.1536.824@0.0.1536.824" timestamp="1654515482104" />
+    <state x="-103" y="535" width="1478" height="303" key="dock-window-2" timestamp="1654515606545">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="-103" y="535" width="1478" height="303" key="dock-window-2/0.0.1536.824@0.0.1536.824" timestamp="1654515606545" />
+    <state x="647" y="149" width="441" height="526" key="ftp.server.browser" timestamp="1655527625953">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="647" y="149" width="441" height="526" key="ftp.server.browser/0.0.1536.824@0.0.1536.824" timestamp="1655527625953" />
+    <state x="425" y="66" width="672" height="676" key="search.everywhere.popup" timestamp="1655286365314">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="66" width="672" height="676" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1655286365314" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dataset/graspnet_dataset.py</url>
+          <line>276</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://D:/Pycharm/system/remote_sources/1565074621/1382654294/graspnetAPI/utils/vis.py</url>
+          <line>282</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://D:/Pycharm/system/remote_sources/1565074621/1382654294/graspnetAPI/utils/vis.py</url>
+          <line>323</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dataset/graspnet_dataset.py</url>
+          <line>157</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://D:/Pycharm/system/remote_sources/1565074621/1382654294/graspnetAPI/graspnet.py</url>
+          <line>658</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://D:/Pycharm/system/remote_sources/1565074621/1382654294/graspnetAPI/graspnet.py</url>
+          <line>634</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/amodal_grasp/scripts/filter_model_grasp.py</url>
+          <line>11</line>
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dataset/graspnet_dataset.py</url>
+          <line>204</line>
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/amodal_grasp/test/test_box_extract.py</url>
+          <line>15</line>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/amodal_grasp/test/test_box_extract.py</url>
+          <line>13</line>
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://D:/Pycharm/system/remote_sources/1565074621/1382654294/graspnetAPI/graspnet.py</url>
+          <line>321</line>
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/amodal_grasp/scripts/process_mesh.py</url>
+          <line>11</line>
+          <option name="timeStamp" value="64" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/amodal_grasp/dataset/amodal_grasp_dataset_no_cache.py</url>
+          <line>95</line>
+          <option name="timeStamp" value="75" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/amodal_grasp/dataset/amodal_grasp_dataset_no_cache.py</url>
+          <line>75</line>
+          <option name="timeStamp" value="76" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/amodal_grasp/scripts/generate_nocs_para.py</url>
+          <line>30</line>
+          <option name="timeStamp" value="98" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/amodal_grasp/scripts/generate_nocs_para.py</url>
+          <line>33</line>
+          <option name="timeStamp" value="100" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/amodal_grasp/scripts/marching_cube_models.py</url>
+          <line>11</line>
+          <option name="timeStamp" value="118" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/amodal_grasp/scripts/generate_scene_grasp_mask.py</url>
+          <line>113</line>
+          <option name="timeStamp" value="257" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/amodal_grasp/scripts/generate_scene_grasp_mask.py</url>
+          <line>111</line>
+          <option name="timeStamp" value="258" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/amodal_grasp/scripts/generate_scene_grasp_mask.py</url>
+          <line>50</line>
+          <option name="timeStamp" value="259" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/amodal_grasp/scripts/generate_scene_grasp_mask.py</url>
+          <line>59</line>
+          <option name="timeStamp" value="260" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/amodal_grasp/scripts/generate_scene_grasp_mask.py</url>
+          <line>91</line>
+          <option name="timeStamp" value="261" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/amodal_grasp/scripts/filter_model_grasp.py</url>
+          <line>53</line>
+          <option name="timeStamp" value="262" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/amodal_grasp/scripts/generate_collision_mask.py</url>
+          <line>43</line>
+          <option name="timeStamp" value="267" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/amodal_grasp/scripts/generate_visible_mask.py</url>
+          <line>174</line>
+          <option name="timeStamp" value="307" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/amodal_grasp/scripts/generate_visible_mask.py</url>
+          <line>163</line>
+          <option name="timeStamp" value="308" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://D:/Pycharm/system/remote_sources/-430842387/184872619/mmdet/models/roi_heads/bbox_heads/bbox_head.py</url>
+          <line>265</line>
+          <option name="timeStamp" value="333" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://D:/Pycharm/system/remote_sources/-430842387/184872619/mmdet/models/roi_heads/bbox_heads/bbox_head.py</url>
+          <line>269</line>
+          <option name="timeStamp" value="334" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://D:/Pycharm/system/remote_sources/-430842387/184872619/mmdet/models/losses/cross_entropy_loss.py</url>
+          <line>279</line>
+          <option name="timeStamp" value="335" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/amodal_grasp/scripts/generate_nocs_and_pc.py</url>
+          <line>105</line>
+          <option name="timeStamp" value="384" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/amodal_grasp/scripts/generate_grasp_map.py</url>
+          <line>86</line>
+          <option name="timeStamp" value="391" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/amodal_grasp/models/amodal_grasp_roi_head.py</url>
+          <line>178</line>
+          <option name="timeStamp" value="504" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/amodal_grasp/models/nocs_head.py</url>
+          <line>157</line>
+          <option name="timeStamp" value="509" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/amodal_grasp/models/grasp_head.py</url>
+          <line>171</line>
+          <option name="timeStamp" value="510" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/amodal_grasp/tools/test.py</url>
+          <line>296</line>
+          <option name="timeStamp" value="551" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://D:/Pycharm/system/remote_sources/-482495115/594932289/mmdet/core/visualization/image.py</url>
+          <line>368</line>
+          <option name="timeStamp" value="552" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://D:/Pycharm/system/remote_sources/-482495115/594932289/mmcv/image/io.py</url>
+          <line>311</line>
+          <option name="timeStamp" value="553" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://D:/Pycharm/system/remote_sources/-482495115/594932289/mmcv/image/io.py</url>
+          <line>307</line>
+          <option name="timeStamp" value="554" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://D:/Pycharm/system/remote_sources/-482495115/594932289/mmcv/image/io.py</url>
+          <line>300</line>
+          <option name="timeStamp" value="555" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/amodal_grasp/models/utils/nocs_utils.py</url>
+          <line>214</line>
+          <option name="timeStamp" value="594" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/amodal_grasp/models/utils/nocs_utils.py</url>
+          <line>318</line>
+          <option name="timeStamp" value="595" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/amodal_grasp/dataset/amodal_grasp_dataset.py</url>
+          <line>218</line>
+          <option name="timeStamp" value="596" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/amodal_grasp/dataset/amodal_grasp_dataset.py</url>
+          <line>147</line>
+          <option name="timeStamp" value="597" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/amodal_grasp/scripts/ply_to_obj.py</url>
+          <line>9</line>
+          <option name="timeStamp" value="607" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/amodal_grasp/scripts/pybullet/generate_urdfs.py</url>
+          <line>41</line>
+          <option name="timeStamp" value="614" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/amodal_grasp/scripts/pybullet/generate_pybullet_scene.py</url>
+          <line>88</line>
+          <option name="timeStamp" value="646" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/amodal_grasp/scripts/pybullet/generate_nocs_box_label.py</url>
+          <line>134</line>
+          <option name="timeStamp" value="661" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/amodal_grasp/scripts/pybullet/generate_grasp_map.py</url>
+          <line>117</line>
+          <option name="timeStamp" value="675" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/amodal_grasp/scripts/pybullet/generate_grasp_map.py</url>
+          <line>46</line>
+          <option name="timeStamp" value="697" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/amodal_grasp/models/amodal_grasp_roi_head.py</url>
+          <line>149</line>
+          <option name="timeStamp" value="715" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/amodal_grasp/models/amodal_grasp_roi_head.py</url>
+          <line>487</line>
+          <option name="timeStamp" value="745" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/amodal_grasp/models/mesh_head.py</url>
+          <line>169</line>
+          <option name="timeStamp" value="768" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/amodal_grasp/models/utils/mesh.py</url>
+          <line>27</line>
+          <option name="timeStamp" value="774" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/amodal_grasp/models/utils/shape.py</url>
+          <line>73</line>
+          <option name="timeStamp" value="776" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/amodal_grasp/models/utils/mesh.py</url>
+          <line>19</line>
+          <option name="timeStamp" value="777" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/amodal_grasp/models/amodal_grasp_roi_head.py</url>
+          <line>279</line>
+          <option name="timeStamp" value="822" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/amodal_grasp/models/utils/nocs_utils.py</url>
+          <line>100</line>
+          <option name="timeStamp" value="827" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/amodal_grasp/models/utils/nocs_utils.py</url>
+          <line>96</line>
+          <option name="timeStamp" value="828" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/amodal_grasp/models/amodal_grasp_roi_head.py</url>
+          <line>369</line>
+          <option name="timeStamp" value="847" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/amodal_grasp/models/amodal_grasp_roi_head.py</url>
+          <line>519</line>
+          <option name="timeStamp" value="853" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/amodal_grasp/models/voxel_head.py</url>
+          <line>314</line>
+          <option name="timeStamp" value="856" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/amodal_grasp/models/voxel_head.py</url>
+          <line>331</line>
+          <option name="timeStamp" value="873" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/amodal_grasp/models/amodal_grasp_roi_head.py</url>
+          <line>365</line>
+          <option name="timeStamp" value="875" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/amodal_grasp/models/utils/nocs_utils.py</url>
+          <line>235</line>
+          <option name="timeStamp" value="876" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/amodal_grasp/models/amodal_grasp_roi_head.py</url>
+          <line>575</line>
+          <option name="timeStamp" value="882" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="a" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/graspnet_baseline_main$voxel_head.coverage" NAME="voxel_head Coverage Results" MODIFIED="1655254839161" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/graspnet_baseline_main$graspnet_dataset.coverage" NAME="graspnet_dataset Coverage Results" MODIFIED="1653716765793" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dataset" />
+    <SUITE FILE_PATH="coverage/graspnet_baseline_main$generate_binvox.coverage" NAME="generate_binvox Coverage Results" MODIFIED="1653796722646" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/amodal_grasp/scripts" />
+    <SUITE FILE_PATH="coverage/graspnet_baseline_main$convert.coverage" NAME="convert Coverage Results" MODIFIED="1654414742215" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/amodal_grasp/scripts" />
+    <SUITE FILE_PATH="coverage/graspnet_baseline_main$test_offical_dataset.coverage" NAME="test_offical_dataset Coverage Results" MODIFIED="1653709477504" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/amodal_grasp/test" />
+    <SUITE FILE_PATH="coverage/graspnet_baseline_main$marching_cube_models.coverage" NAME="marching_cube_models Coverage Results" MODIFIED="1653833947403" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/amodal_grasp/scripts" />
+    <SUITE FILE_PATH="coverage/graspnet_baseline_main$train.coverage" NAME="train Coverage Results" MODIFIED="1654567875248" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/graspnet_baseline_main$process_mesh.coverage" NAME="process_mesh Coverage Results" MODIFIED="1653727393750" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/amodal_grasp/scripts" />
+    <SUITE FILE_PATH="coverage/graspnet_baseline_main$filter_model_grasp.coverage" NAME="filter_model_grasp Coverage Results" MODIFIED="1654435574318" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/amodal_grasp/scripts" />
+    <SUITE FILE_PATH="coverage/graspnet_baseline_main$train_pybullet.coverage" NAME="train_pybullet Coverage Results" MODIFIED="1655525342763" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/graspnet_baseline_main$generate_visible_mask.coverage" NAME="generate_visible_mask Coverage Results" MODIFIED="1654161093973" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/amodal_grasp/scripts" />
+    <SUITE FILE_PATH="coverage/graspnet_baseline_main$generate_nocs_map.coverage" NAME="generate_nocs_map Coverage Results" MODIFIED="1653835818951" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/amodal_grasp/scripts" />
+    <SUITE FILE_PATH="coverage/graspnet_baseline_main$test_dataset.coverage" NAME="test_dataset Coverage Results" MODIFIED="1654777354541" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/amodal_grasp/test" />
+    <SUITE FILE_PATH="coverage/graspnet_baseline_main$ply_to_obj.coverage" NAME="ply_to_obj Coverage Results" MODIFIED="1654944014093" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/amodal_grasp/scripts" />
+    <SUITE FILE_PATH="coverage/graspnet_baseline_main$amodal_grasp_dataset_pybullet.coverage" NAME="amodal_grasp_dataset_pybullet Coverage Results" MODIFIED="1655111977928" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/amodal_grasp/dataset" />
+    <SUITE FILE_PATH="coverage/graspnet_baseline_main$generate_nocs_and_pc.coverage" NAME="generate_nocs_and_pc Coverage Results" MODIFIED="1654440705502" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/amodal_grasp/scripts" />
+    <SUITE FILE_PATH="coverage/graspnet_baseline_main$generate_scenes_grasp.coverage" NAME="generate_scenes_grasp Coverage Results" MODIFIED="1654090908871" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/amodal_grasp/scripts" />
+    <SUITE FILE_PATH="coverage/graspnet_baseline_main$grasp_labels_to_H.coverage" NAME="grasp_labels_to_H Coverage Results" MODIFIED="1653711511361" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/amodal_grasp/scripts" />
+    <SUITE FILE_PATH="coverage/graspnet_baseline_main$test_box_extract.coverage" NAME="test_box_extract Coverage Results" MODIFIED="1653725195718" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/amodal_grasp/test" />
+    <SUITE FILE_PATH="coverage/graspnet_baseline_main$train_coco.coverage" NAME="train_coco Coverage Results" MODIFIED="1654320631286" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/graspnet_baseline_main$train__1_.coverage" NAME="train (1) Coverage Results" MODIFIED="1655517758025" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/amodal_grasp/tools" />
+    <SUITE FILE_PATH="coverage/graspnet_baseline_main$generate_nocs_box_label__1_.coverage" NAME="generate_nocs_box_label (1) Coverage Results" MODIFIED="1655033683072" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/amodal_grasp/scripts/pybullet" />
+    <SUITE FILE_PATH="coverage/graspnet_baseline_main$test_dataset_offical.coverage" NAME="test_dataset_offical Coverage Results" MODIFIED="1653640226822" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/my_test" />
+    <SUITE FILE_PATH="coverage/graspnet_baseline_main$generate_pybullet_scene__1_.coverage" NAME="generate_pybullet_scene (1) Coverage Results" MODIFIED="1655027233308" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/amodal_grasp/scripts/pybullet" />
+    <SUITE FILE_PATH="coverage/graspnet_baseline_main$generate_collision_mask.coverage" NAME="generate_collision_mask Coverage Results" MODIFIED="1654135619576" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/amodal_grasp/scripts" />
+    <SUITE FILE_PATH="coverage/graspnet_baseline_main$generate_urdf.coverage" NAME="generate_urdf Coverage Results" MODIFIED="1655009048610" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/amodal_grasp/scripts" />
+    <SUITE FILE_PATH="coverage/graspnet_baseline_main$remove_dir.coverage" NAME="remove_dir Coverage Results" MODIFIED="1654134768549" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/amodal_grasp/scripts" />
+    <SUITE FILE_PATH="coverage/graspnet_baseline_main$test.coverage" NAME="test Coverage Results" MODIFIED="1654679382059" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/amodal_grasp" />
+    <SUITE FILE_PATH="coverage/graspnet_baseline_main$generate_pybullet_scene.coverage" NAME="generate_pybullet_scene Coverage Results" MODIFIED="1655028002859" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/amodal_grasp" />
+    <SUITE FILE_PATH="coverage/graspnet_baseline_main$test_model.coverage" NAME="test_model Coverage Results" MODIFIED="1655344430554" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/amodal_grasp" />
+    <SUITE FILE_PATH="coverage/graspnet_baseline_main$generate_scene_grasp_mask__1_.coverage" NAME="generate_scene_grasp_mask (1) Coverage Results" MODIFIED="1654089174479" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/amodal_grasp/scripts" />
+    <SUITE FILE_PATH="coverage/graspnet_baseline_main$test_voxel_head.coverage" NAME="test_voxel_head Coverage Results" MODIFIED="1655255668087" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/amodal_grasp/test" />
+    <SUITE FILE_PATH="coverage/graspnet_baseline_main$generate_nocs.coverage" NAME="generate_nocs_box_label Coverage Results" MODIFIED="1655033253005" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/amodal_grasp/scripts/pybullet" />
+    <SUITE FILE_PATH="coverage/graspnet_baseline_main$generate_grasp_map.coverage" NAME="generate_grasp_map Coverage Results" MODIFIED="1655100123152" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/amodal_grasp/scripts/pybullet" />
+    <SUITE FILE_PATH="coverage/graspnet_baseline_main$filter_grasp2.coverage" NAME="filter_grasp2 Coverage Results" MODIFIED="1653973897376" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/amodal_grasp/scripts" />
+    <SUITE FILE_PATH="coverage/graspnet_baseline_main$generate_nocs_para.coverage" NAME="generate_nocs_para Coverage Results" MODIFIED="1654440106899" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/amodal_grasp/scripts" />
+    <SUITE FILE_PATH="coverage/graspnet_baseline_main$generate_voxel.coverage" NAME="generate_voxel Coverage Results" MODIFIED="1655104731380" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/amodal_grasp/scripts" />
+    <SUITE FILE_PATH="coverage/graspnet_baseline_main$copy_models.coverage" NAME="copy_models Coverage Results" MODIFIED="1654669376168" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/amodal_grasp/scripts" />
+    <SUITE FILE_PATH="coverage/graspnet_baseline_main$process_scene.coverage" NAME="process_scene Coverage Results" MODIFIED="1653716537213" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/amodal_grasp/scripts" />
+    <SUITE FILE_PATH="coverage/graspnet_baseline_main$obj.coverage" NAME="obj Coverage Results" MODIFIED="1654943221762" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/Pycharm/system/remote_sources/-482495115/594932289/trimesh/exchange" />
+    <SUITE FILE_PATH="coverage/graspnet_baseline_main$check_mesh.coverage" NAME="check_mesh Coverage Results" MODIFIED="1655209173000" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/amodal_grasp/scripts/pybullet" />
+    <SUITE FILE_PATH="coverage/graspnet_baseline_main$amodal_grasp_dataset.coverage" NAME="amodal_grasp_dataset Coverage Results" MODIFIED="1654328852908" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/amodal_grasp/dataset" />
+  </component>
+</project>

@@ -2,11 +2,86 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from mmcv.cnn import ConvModule
-from mmdet.models.builder import HEADS
-from mmcv.cnn import (build_conv_layer, build_norm_layer, build_upsample_layer,
-                      constant_init, normal_init)
+from mmdet.models.builder import HEADS, LOSSES, build_loss
 
 
+def batch_argmax(tensor):
+    '''
+    Locate uv of max value in a tensor in dim 2 and dim 3.
+    The tensor.ndim should be 4 (typically tensor.shape = (16, 3, 64, 64)).
+
+    Args:
+        tensor: torch.tensor
+
+    Returns: uv of max value with batch.
+
+    '''
+    # if tensor.shape = (16, 3, 64, 64)
+    assert tensor.ndim == 4, 'The tensor.ndim should be 4 (typically tensor.shape = (16, 3, 64, 64)).'
+    b, c, h, w = tensor.shape
+    tensor = tensor.reshape(b, c, -1)  # flatten the tensor to (16, 3, 4096)
+    value, idx = tensor.max(dim=2)
+    v = idx // w    # shape (16, 3)
+    u = idx - v * w  # shape (16, 3)
+    u, v = u.unsqueeze(-1), v.unsqueeze(-1)  # reshape u, v to (16, 3, 1) for cat
+    uv = torch.cat((u, v), dim=-1)  # shape (16, 3, 2)
+    return uv, value
+
+
+def heatmap_to_uv(hm, mode='max'):
+    '''
+    Locate single keypoint pixel coordinate uv in heatmap.
+
+    Args:
+        hm:  shape (bz, c, w, h), dim=4
+        mode: -
+
+    Returns: keypoint pixel coordinate uv, shape  (1, 2)
+
+    '''
+
+    assert mode in ('max', 'average')
+    if mode == 'max':
+        uv = batch_argmax(hm)
+    elif mode == 'average':
+        b, c, h, w = hm.shape
+        hm = hm.reshape(b, c, -1)
+        hm = hm / torch.sum(hm, dim=-1, keepdim=True)
+        v_map, u_map = torch.meshgrid(torch.arange(h), torch.arange(w))
+        u_map = u_map.reshape(1, 1, -1).float().to(hm.device)
+        v_map = v_map.reshape(1, 1, -1).float().to(hm.device)
+        u = torch.sum(u_map * hm, -1, keepdim=True)
+        v = torch.sum(v_map * hm, -1, keepdim=True)
+        uv = torch.cat((u, v), dim=-1)
+    return uv
+
+
+def batch_index_uv_value(tensor: torch.Tensor,
+                   uv: torch.Tensor):
+    '''
+    example:
+    N, C, H, W = 2, 3, 3, 3
+    tensor = torch.randn(N, C, H, W)
+    uv = torch.randint(H, (N, C, 2), dtype=torch.long)
+    uv_value = batch_index_uv_value(tensor, uv)
+    '''
+
+    assert tensor.dim() == 4
+    assert uv.dim() == 3 and uv.size(-1) == 2
+    N, C, H, W = tensor.shape
+    u =  uv[:, :, 0]
+    v =  uv[:, :, 1]
+
+    uv_flatten = v * H + u
+    uv_flatten = uv_flatten.view(N, C, 1)
+    tensor = tensor.view(N, C, H * W)
+    uv_value =  torch.gather(tensor, -1 , uv_flatten)
+    return uv_value
+
+
+
+
+@LOSSES.register_module()
 class JointsMSELoss(nn.Module):
     """MSE loss for heatmaps.
 
@@ -20,7 +95,7 @@ class JointsMSELoss(nn.Module):
         self.criterion = nn.MSELoss()
         self.use_target_weight = use_target_weight
 
-    def forward(self, output, target, target_weight):
+    def forward(self, output, target, target_weight=None):
         """Forward function."""
         batch_size = output.size(0)
         num_joints = output.size(1)
@@ -46,156 +121,116 @@ class JointsMSELoss(nn.Module):
 @HEADS.register_module()
 class GraspHead(nn.Module):
     def __init__(self,
-                 in_channels=2048,
-                 out_channels=20,
-                 num_deconv_layers=3,
-                 num_deconv_filters=(256, 256, 256),
-                 num_deconv_kernels=(4, 4, 4),
+                 loss_heatmap=dict(type='JointsMSELoss'),
+                 loss_qual=dict(type='CrossEntropyLoss', use_sigmoid=True, loss_weight=1),
+                 loss_width=dict(type='MSELoss', loss_weight=1.0),
+                 loss_quat=dict(type='MSELoss', loss_weight=1.0),
+                 in_channels=256,
+                 out_channels=10,
                  ):
         super().__init__()
+        self.loss_qual = build_loss(loss_qual)
+        self.loss_width = build_loss(loss_width)
+        self.loss_quat = build_loss(loss_quat)
+        self.loss_heatmap = build_loss(loss_heatmap)
+        self.hm_conv = nn.Sequential(*(ConvModule(in_channels, 512, 1),
+                                   ConvModule(128, 64, 1),
+                                   ConvModule(64, 32, 1),
+                                   ConvModule(32, 16, 1),
+                                   ConvModule(16, out_channels, 1)))
 
-        self.in_channels = in_channels
-        self.loss_heatmap = JointsMSELoss(use_target_weight=True)
+        self.grasp_conv = nn.Sequential(*(
+                                   # ConvModule(3, 128, 1),
+                                   ConvModule(in_channels, 128, 1),
+                                   ConvModule(128, 64, 1),
+                                   ConvModule(64, 32, 1),
+                                   ConvModule(32, 16, 1),
+                                   ConvModule(16, out_channels, 1)))
 
 
-        self.deconv_layers = self._make_deconv_layer(
-            num_deconv_layers,
-            num_deconv_filters,
-            num_deconv_kernels,
+        self.conv_quat = nn.Sequential(
+            ConvModule(10, 128, 1, conv_cfg=dict(type='Conv1d')),
+            ConvModule(128, 256, 1, conv_cfg=dict(type='Conv1d')),
+            ConvModule(256, 128, 1, conv_cfg=dict(type='Conv1d')),
+            ConvModule(128, 10, 1, conv_cfg=dict(type='Conv1d')),
+            nn.Linear(1, 4),
         )
-        self.grasp_conv = ConvModule(num_deconv_filters[-1], out_channels, 3, 2, 1)
 
-        self.heatmap_conv = ConvModule(in_channels=num_deconv_filters[-1],
-                                       out_channels=out_channels,
-                                       kernel_size=3,
-                                       stride=4,
-                                       padding=0)
-        self.fc_qual = nn.Linear(6400, 1)
-        self.fc_width = nn.Linear(6400, 1)
-        self.fc_quat = nn.Linear(6400, 4)
+        self.conv_qual = nn.Sequential(
+            ConvModule(10, 128, 1, conv_cfg=dict(type='Conv1d')),
+            ConvModule(128, 256, 1, conv_cfg=dict(type='Conv1d')),
+            ConvModule(256, 128, 1, conv_cfg=dict(type='Conv1d')),
+            ConvModule(128, 10, 1, conv_cfg=dict(type='Conv1d')),
+            nn.Linear(1, 1),        )
 
-    def _make_deconv_layer(self, num_layers, num_filters, num_kernels):
-        """Make deconv layers."""
-        if num_layers != len(num_filters):
-            error_msg = f'num_layers({num_layers}) ' \
-                        f'!= length of num_filters({len(num_filters)})'
-            raise ValueError(error_msg)
-        if num_layers != len(num_kernels):
-            error_msg = f'num_layers({num_layers}) ' \
-                        f'!= length of num_kernels({len(num_kernels)})'
-            raise ValueError(error_msg)
+        self.conv_width = nn.Sequential(
+            ConvModule(10, 128, 1, conv_cfg=dict(type='Conv1d')),
+            ConvModule(128, 256, 1, conv_cfg=dict(type='Conv1d')),
+            ConvModule(256, 128, 1, conv_cfg=dict(type='Conv1d')),
+            ConvModule(128, 10, 1, conv_cfg=dict(type='Conv1d')),
+            nn.Linear(1, 1),        )
 
-        layers = []
-        for i in range(num_layers):
-            kernel, padding, output_padding = \
-                self._get_deconv_cfg(num_kernels[i])
+    def forward_train(self,
+                      x,
+                      # xyz,
+                      gt_heatmap,
+                      gt_qual,
+                      gt_quat,
+                      gt_width,
+                      gt_valid_index=None,
+                      **kwargs):
+        pred_heatmap = self.hm_conv(x) # shape (bz, 10, 80, 80)
+        pred_uv, _ = heatmap_to_uv(hm=pred_heatmap)
+        # pred_uv = (pred_uv / 80 * 320).to(torch.int64)
+        # grasp_feats = self.grasp_conv(xyz)
+        grasp_feats = self.grasp_conv(x)
 
-            planes = num_filters[i]
-            layers.append(
-                build_upsample_layer(
-                    dict(type='deconv'),
-                    in_channels=self.in_channels,
-                    out_channels=planes,
-                    kernel_size=kernel,
-                    stride=2,
-                    padding=padding,
-                    output_padding=output_padding,
-                    bias=False))
-            layers.append(nn.BatchNorm2d(planes))
-            layers.append(nn.ReLU(inplace=True))
-            self.in_channels = planes
-        return nn.Sequential(*layers)
-
-    def forward(self, x):
-        x = self.deconv_layers(x)
-        pred_heatmap = self.heatmap_conv(x)
-        x_grasp = self.grasp_conv(x)
-        x_grasp = x_grasp.reshape(x_grasp.shape[0], x_grasp.shape[1], -1)
-        pred_qual = self.fc_qual(x_grasp)
-        pred_qual = torch.sigmoid(pred_qual).squeeze(-1)
-        pred_quat = self.fc_quat(x_grasp)
-        pred_width = self.fc_width(x_grasp).squeeze(-1)
-
-        return pred_heatmap, pred_qual, pred_width, pred_quat
-
-    @staticmethod
-    def _get_deconv_cfg(deconv_kernel):
-        """Get configurations for deconv layers."""
-        if deconv_kernel == 4:
-            padding = 1
-            output_padding = 0
-        elif deconv_kernel == 3:
-            padding = 1
-            output_padding = 1
-        elif deconv_kernel == 2:
-            padding = 0
-            output_padding = 0
-        else:
-            raise ValueError(f'Not supported num_kernels ({deconv_kernel}).')
-        return deconv_kernel, padding, output_padding
+        pred_uv_value = batch_index_uv_value(grasp_feats, pred_uv)
 
 
-    def _qual_loss_fn(self, pred, target):
-        return F.binary_cross_entropy(pred, target, reduction="mean")
+        pred_qual = self.conv_qual(pred_uv_value)
+        pred_quat = self.conv_quat(pred_uv_value)
+        pred_width = self.conv_width(pred_uv_value)
 
-    def _quat_loss_fn(self, pred, target):
-        return F.mse_loss(pred, target, reduction="mean")
+        if gt_valid_index is not None:
+            pred_qual, gt_qual = pred_qual[gt_valid_index], gt_qual[gt_valid_index]
+            pred_quat, gt_quat = pred_quat[gt_valid_index], gt_quat[gt_valid_index]
+            pred_width, gt_width = pred_width[gt_valid_index], gt_width[gt_valid_index]
+            pred_heatmap, gt_heatmap = pred_heatmap[gt_valid_index], gt_heatmap[gt_valid_index]
+        loss_qual = self.loss_qual(pred_qual, gt_qual)
+        loss_quat = self.loss_quat(pred_quat, gt_quat)
+        loss_width = self.loss_width(pred_width, gt_width)
+        loss_heatmap = self.loss_heatmap(pred_heatmap, gt_heatmap)
 
-    def _width_loss_fn(self, pred, target):
-        return F.mse_loss(pred, target, reduction="mean")
-
-
-    def loss(self,
-             pred_heatmap,
-             pred_qual,
-             pred_width,
-             pred_quat,
-
-             gt_heatmap,
-             gt_qual,
-             gt_width,
-             gt_quat):
-
-        loss_qual = self._qual_loss_fn(pred_qual, gt_qual)
-        loss_heatmap = self.loss_heatmap(pred_heatmap, gt_heatmap, torch.ones((pred_heatmap.shape[0],
-                                                                               pred_heatmap.shape[1],
-                                                                               1,
-                                                                               ), device=pred_heatmap.device))
-        loss_width = self._width_loss_fn(pred_width, gt_width)
-        loss_quat = self._quat_loss_fn(pred_quat, gt_quat)
-
-
-        losses = dict(loss_heatmap= loss_heatmap,
-                      loss_qual = loss_qual,
-                      loss_width = loss_width,
-                      loss_quat = loss_quat)
+        losses = dict(loss_width=loss_width,
+                      loss_heatmap=loss_heatmap,
+                      loss_quat=loss_quat,
+                      loss_qual=loss_qual)
         return losses
 
+    def simple_test(self, x):
+        pred_heatmap = self.conv(x) # shape (bz, 10, 80, 80)
+        pred_uv = heatmap_to_uv(hm=pred_heatmap)
+        pred_uv_value = pred_heatmap[pred_uv] # shape (bz, 10, 1)
+
+        pred_qual = self.fc_qual(pred_uv_value)
+        pred_quat = self.fc_quat(pred_uv_value)
+        pred_width = self.fc_width(pred_uv_value)
+
+        res = dict(pred_uv=pred_uv,
+                   pred_width=pred_width,
+                   pred_qual=pred_qual,
+                   pred_quat=pred_quat)
+
+        return res
 
 
 if __name__ == '__main__':
-    from mmdet.models.backbones.resnet import ResNet
-    backbone = ResNet(depth=50)
-    img = torch.rand(8, 3, 640, 640)
-    feats = backbone(img)
-    head = GraspHead(in_channels=2048,
-                  out_channels=10,
-                  )
+    x = torch.rand(16, 256, 80, 80)
+    gt_heatmap =torch.rand(16, 10, 80, 80)
+    gt_qual = torch.rand(16, 10)
+    gt_quat = torch.rand(16, 10, 4)
+    gt_width = torch.rand(16, 10)
 
-    pred_heatmap, pred_qual, pred_width, pred_quat = head(feats[-1])
-
-    gt_heatmap =  torch.rand_like(pred_heatmap)
-    gt_qual = torch.rand_like(pred_qual)
-    gt_quat = torch.rand_like(pred_quat)
-    gt_width = torch.rand_like(pred_width)
-
-
-
-    losses = head.loss(pred_heatmap,
-                       pred_qual,
-                       pred_width,
-                       pred_quat,
-                       gt_heatmap,
-                       gt_qual,
-                       gt_width,
-                       gt_quat)
+    head = GraspHead()
+    res = head.forward_train(x, gt_heatmap=gt_heatmap, gt_width=gt_width, gt_quat=gt_quat, gt_qual=gt_qual)

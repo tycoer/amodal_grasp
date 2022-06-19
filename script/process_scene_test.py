@@ -6,6 +6,7 @@ import argparse
 import json
 import pandas as pd
 import open3d as o3d
+from sklearn.neighbors import KDTree
 
 
 def xyz2uv(xyz, fx, fy, cx, cy):
@@ -22,7 +23,7 @@ def process_grasp(csv_path):
     grasp_infos = {i: [] for i in scene_id_unique}
     for i in tqdm.tqdm(range(csv.__len__())):
         grasp_info = csv.iloc[i].to_list()
-        grasp_infos[grasp_info[0]].append(grasp_info[1:-1])
+        grasp_infos[grasp_info[0]].append(grasp_info[1:])
     return grasp_infos
 
 def pc_cam_to_pc_world(pc, extrinsic):
@@ -58,10 +59,10 @@ def grasp_world_to_cam(grasp_info, extr, intr):
     
     
     grasp_info = np.array(grasp_info)
-    grasp_quat = grasp_info[:, :4]
-    grasp_T = grasp_info[:, 4:7]
-    grasp_width = grasp_info[:, 7]
-    grasp_qual = grasp_info[:, 8]
+    grasp_quat = np.float32(grasp_info[:, :4])
+    grasp_T = np.float32(grasp_info[:, 4:7])
+    grasp_width = np.float32(grasp_info[:, 7])
+    grasp_qual = np.int32(grasp_info[:, 8])
     
     quat_cam_list = []
     T_cam_list = []
@@ -87,8 +88,14 @@ def grasp_world_to_cam(grasp_info, extr, intr):
     return grasp_quat_cam, grasp_T_cam, grasp_T_uv, grasp_width, grasp_qual, grasp_H_cam
     
         
-    
-    
+def project_grasp_on_object(grasp_T_cam, obj_xyz):
+    # 将位于物体外的抓点投射到物体表面
+    knn = KDTree(obj_xyz)
+    distances, ids = knn.query(grasp_T_cam, k=1)
+    grasp_T_cam_on_object = obj_xyz[ids]
+    return grasp_T_cam_on_object
+
+
 
 def depth2pc(depth, fx, fy, cx, cy, w, h, depth_scale=1, ):
     h_grid, w_grid= np.mgrid[0: h, 0: w]
@@ -134,7 +141,7 @@ def preprocess_images(data_root):
         nocs_para = json.load(f)
     K = setup['intrinsic']['K']
 
-    w, h = 640, 480
+    w, h = int(K[2] * 2), int(K[5] * 2)
     camera = dict(h=h,
                   w=w,
                   fx=K[0],
@@ -149,6 +156,7 @@ def preprocess_images(data_root):
                'cap': '3',
                'cell_phone': '4',
                'mug': '5'}
+    print('Processing grasp...')
     grasp_infos = process_grasp(csv_path=csv_path)
 
     results = {}
@@ -165,14 +173,43 @@ def preprocess_images(data_root):
 
         xyz = depth2pc(depth, depth_scale=1, **camera)  # xyz shape (480, 640, 3)
         extr =  get_extr(extrinsic)
+        uid_mask = np.unique(mask)
         # xyz 转换成世界坐标系的原因: 仿真器中记录的 物体的pose, gripper的pose都是世界坐标系下的
         # 而 xyz 在相机坐标系下, 故转为世界坐标系以统一
         # xyz_world = pc_cam_to_pc_world(xyz.reshape(-1, 3), extrinsic)
-        
+
         ######### grasps processing #############
+        if scene_id not in grasp_infos:
+            continue
         grasp_info = grasp_infos[scene_id]
         grasp_quat_cam, grasp_T_cam, grasp_T_uv, grasp_width, grasp_qual, grasp_H_cam = grasp_world_to_cam(grasp_info, extr, camera)
-        
+        # gripped_obj_uid_list = [[i, info[-1]] for i, info in enumerate(grasp_info) if info[-1] != "None"]
+        # if len(gripped_obj_uid_list) == 0:
+        #     # 如果一个scene中没有有效的抓取则跳过整个scene
+        #     continue
+        # grasp_T_cam_on_obj_list = []
+        # grasp_T_uv_on_obj_list = []
+        # for j, uid in gripped_obj_uid_list:
+        #     uid = int(uid)
+        #     if uid in uid_mask:
+        #         mask_obj = mask == uid
+        #         xyz_obj = xyz.reshape(-1, 3)[mask_obj.flatten()]
+        #         knn = KDTree(xyz_obj)
+        #         _, id = knn.query(grasp_T_cam[j][None], k=1)
+        #         id = id.flatten()
+        #         grasp_T_cam_on_obj = xyz_obj[id]
+        #         grasp_T_uv_on_obj = xyz2uv(grasp_T_cam_on_obj,
+        #                                    fx=camera['fx'],
+        #                                    fy=camera['fy'],
+        #                                    cx=camera['cx'],
+        #                                    cy=camera['cy']
+        #                                    )
+        #         grasp_T_cam_on_obj_list.append(grasp_T_cam_on_obj)
+        #         grasp_T_uv_on_obj_list.append(grasp_T_uv_on_obj)
+        # grasp_T_uv_on_obj_list = np.array(grasp_T_uv_on_obj_list)
+        # grasp_T_cam_on_obj_list =  np.vstack(grasp_T_cam_on_obj_list)
+        ################################################################
+
         masks = []
         nocs_maps = []
         labels = []
@@ -181,6 +218,7 @@ def preprocess_images(data_root):
         uid_mask = np.unique(mask)
         num_instance = 0
         obj_poses = []
+        obj_scales = []
 
         for anno in annos:
             ###############  mask ##############
@@ -224,19 +262,20 @@ def preprocess_images(data_root):
             nocs_map[~mask_obj.flatten()] = 0
             nocs_maps.append(nocs_map)
             ################ labels ###########
-            labels.append(CLASSES[anno['category']])
+            labels.append(int(CLASSES[anno['obj_name'].split('/')[0]]))
             num_instance += 1
             obj_names.append(anno['obj_name'])
             obj_poses.append(H_cam)
-
+            obj_scales.append(scale)
 
         nocs_maps = np.stack(nocs_maps, axis=-2).reshape(h, w, num_instance, 3)
         masks = np.stack(masks, axis=-1)
         boxes_2d = np.int32(boxes_2d)
         labels = np.int32(labels)
         obj_poses = np.float32(obj_poses)
-
+        obj_scales = np.float32(obj_scales)
         np.savez_compressed(file=os.path.join(save_dir, i),
+                            scene_id=scene_id,
                             obj_names=obj_names,
                             gt_masks=masks,  # shape (480, 640, num_instance)
                             gt_coords=nocs_maps,  # shape (480, 640, num_instance, 3)
@@ -245,15 +284,16 @@ def preprocess_images(data_root):
                             extrinsic=extr,
                             gt_labels=labels,
                             gt_bboxes=boxes_2d,
-                            gt_obj_pose=obj_poses,
+                            gt_obj_poses=obj_poses,
+                            gt_obj_scales=obj_scales,
                             # gripper
-                            gt_gripper_quat =  grasp_quat_cam, 
-                            gt_gripper_T_uv = grasp_T_uv, 
-                            gt_gripper_T_cam = grasp_T_cam, 
-                            gt_gripper_qual = grasp_qual, 
+                            gt_gripper_quat =  grasp_quat_cam,
+                            gt_gripper_T_uv = grasp_T_uv,
+                            # gt_gripper_T_uv_on_obj = grasp_T_uv_on_obj_list,
+                            # gt_gripper_T_cam_on_obj =  grasp_T_cam_on_obj_list,
+                            gt_gripper_T_cam = grasp_T_cam,
+                            gt_gripper_qual = grasp_qual,
                             gt_gripper_width =  grasp_width,
-
-
                             )
 
 if __name__ == '__main__':

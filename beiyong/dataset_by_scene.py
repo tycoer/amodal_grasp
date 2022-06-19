@@ -8,12 +8,12 @@ import cv2
 import json
 import torch
 import torchvision
+import matplotlib.pyplot as plt
 
-
-def generate_heatmap_2d(uv, heatmap_shape, sigma=3):
+def generate_heatmap_2d(uv, heatmap_shape, kernal_size=3, sigma_x=2):
     hm = np.zeros(heatmap_shape)
     hm[uv[1], uv[0]] = 1
-    hm = cv2.GaussianBlur(hm, (sigma, sigma), 1)
+    hm = cv2.GaussianBlur(hm, (kernal_size, kernal_size), sigma_x)
     hm /= hm.max()  # normalize hm to [0, 1]
     return hm # outshape
 
@@ -21,22 +21,29 @@ def generate_heatmap_2d(uv, heatmap_shape, sigma=3):
 @PIPELINES.register_module()
 class GenerateHM:
     def __init__(self,
-                 max_heatmap_num=16,
-                 heatmap_shape=(40, 40),
-                 sigma=7):
+                 max_heatmap_num=10,
+                 heatmap_shape=(80, 80),
+                 kernal_size=7,
+                 sigma_x=2):
         self.max_heatmap_num = max_heatmap_num
         self.heatmap_shape = heatmap_shape
-        self.sigma = sigma
+        self.sigma_x = sigma_x
+        self.kernal_size = kernal_size
 
     def __call__(self, results):
         uvs = results['gt_gripper_T_uv_on_obj']
+        valid_index = np.zeros(self.max_heatmap_num)
+        valid_index[:len(uvs)] = 1
+        valid_index = valid_index.astype('bool')
+        ray_index = results['index_ray']
         quat = results['gt_gripper_quat']
         qual = results['gt_gripper_qual'].reshape(-1, 1)
         width = results['gt_gripper_width'].reshape(-1, 1)
-        grasp_info = np.hstack((uvs, quat, qual, width))
+        grasp_info = np.hstack((uvs, np.hstack((quat, qual, width))[ray_index]))
 
         if len(uvs) < self.max_heatmap_num:
             grasp_info_padding = np.zeros((self.max_heatmap_num, grasp_info.shape[1]))
+            grasp_info_padding[:, 7] = 0.08 # width 负样本应该为 0.08 而不是0
             grasp_info_padding[:len(grasp_info), :] = grasp_info
             grasp_info = np.float32(grasp_info_padding)
 
@@ -44,19 +51,25 @@ class GenerateHM:
             grasp_info = np.float32(grasp_info[:self.max_heatmap_num])
 
         uvs = grasp_info[:, :2]
-        uv_for_hm = uvs / results['img_shape'][:2] * np.array(self.heatmap_shape)
+        uv_for_hm = uvs / results['img'].shape[:2] * np.array(self.heatmap_shape)
         uv_for_hm = np.int32(uv_for_hm)
-        heatmaps = np.zeros((self.max_heatmap_num,) + self.heatmap_shape, dtype='uint8')
+        heatmaps = np.zeros((self.max_heatmap_num,) + self.heatmap_shape, dtype='float32')
         for i in range(len(uv_for_hm)):
             uv = uv_for_hm[i]
-            heatmaps[i] = generate_heatmap_2d(uv, heatmap_shape=self.heatmap_shape, sigma=self.sigma)
+            if uv[0] == 0 and uv[1] == 0:
+                continue
+            heatmaps[i] = generate_heatmap_2d(uv,
+                                              heatmap_shape=self.heatmap_shape,
+                                              kernal_size=self.kernal_size,
+                                              sigma_x=self.sigma_x)
 
-        results['gt_heatmaps'] = heatmaps
+        results['gt_heatmaps'] = heatmaps.astype('float32')
         results['gt_gripper_T_uv_for_hm'] = uv_for_hm
         results['gt_gripper_T_uv'] = grasp_info[:, :2]
-        results['gt_gripper_quat'] = grasp_info[:, 2:6]
-        results['gt_gripper_qual'] = grasp_info[:, 6]
-        results['gt_gripper_width'] = grasp_info[:, 7]
+        results['gt_gripper_quat'] = grasp_info[:, 2:6].astype('float32')
+        results['gt_gripper_qual'] = grasp_info[:, 6].astype(np.int8).reshape(-1, 1)
+        results['gt_gripper_width'] = grasp_info[:, 7].astype('float32').reshape(-1, 1)
+        results['gt_gripper_valid_index'] = valid_index
         return results
 
 @PIPELINES.register_module()
@@ -68,7 +81,7 @@ class SimplePadding:
         img = results['img']
         h, w, d = img.shape
         padding_shape = self.out_shape + (d,)
-        padding = np.zeros(padding_shape, dtype='uint8')
+        padding = np.zeros(padding_shape, dtype='float32')
         padding[:h, :w, :] = img
 
         results['img'] = padding
@@ -94,11 +107,11 @@ class WarpMask:
 @DATASETS.register_module()
 class AmodalGraspDataset(CustomDataset):
     CLASSES = {'bottle': '0',
-             'bowl': '1',
-             'can': '2',
-             'cap': '3',
-             'cell_phone': '4',
-             'mug': '5'}
+                 'bowl': '1',
+                 'can': '2',
+                 'cap': '3',
+                 'cell_phone': '4',
+                 'mug': '5'}
 
     def __init__(self,
                  data_root,
@@ -140,10 +153,12 @@ class AmodalGraspDataset(CustomDataset):
 
 
         if self.pipeline is not None:
+            # results = self.pipeline(results)
+
             try:
                 results = self.pipeline(results)
             except:
-                print(item)
+                # print(item)
                 results = self[np.random.choice(len(self))]
         return results
 

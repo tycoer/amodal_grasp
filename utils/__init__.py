@@ -26,5 +26,5 @@ def workspace_lines(size):
         [0.0, size, size],
     ]
 
-# from .libmesh import check_mesh_contains
-# from .libmesh import triangle_hash
+from .libmesh import check_mesh_contains
+from .libmesh import triangle_hash

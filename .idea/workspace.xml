@@ -1,10 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="31cdc6d3-37b8-4f57-8061-dfcc46c8f688" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="31cdc6d3-37b8-4f57-8061-dfcc46c8f688" name="Default Changelist" comment="update">
+      <change afterPath="$PROJECT_DIR$/beiyong/amodal_grasp.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/beiyong/amodal_grasp_only_grasp_no_mmdet.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/beiyong/dataset_by_scene.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/beiyong/grasp_head.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/beiyong/grasp_head_for_grid.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/amodal_grasp_only_grasp_cfg.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/amodal_grasp_only_grasp_no_mmdet_cfg.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/amodal_grasp_r50_fpn_1x_by_grasp.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generate_data_parallel_amodal_grisp.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/amodal_grasp.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/amodal_grasp_roi_head.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model_2d/amodal_grasp_only_grasp.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model_2d/amodal_grasp_only_grasp_no_mmdet.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model_2d/dataset_by_grasp.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model_2d/grasp_head_for_grid.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model_2d/grasp_head_only_grasp.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model_2d/pipeline.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model_2d/process_grasp_for_dataset_by_grasp.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model_2d/process_grasp_for_dataset_by_scene.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script/giga/add_pc_normals.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script/giga/project_grasp.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script/giga/project_single.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script/giga/project_valid.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script/process_grasp_for_dataset_by_grasp.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test_dataset_by_grasp.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test_dataset_by_scene.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test_decoder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test_project_grasp.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/libmesh/说明.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/amodal_grisp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/amodal_grisp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/amodal_grasp_r50_fpn_1x.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/amodal_grasp_r50_fpn_1x.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/meshrcnn_r50_fpn_1x.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/meshrcnn_r50_fpn_1x.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model_2d/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/model_2d/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model_2d/amodal_grasp.py" beforeDir="false" afterPath="$PROJECT_DIR$/model_2d/amodal_grasp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model_2d/dataset_2d.py" beforeDir="false" afterPath="$PROJECT_DIR$/model_2d/dataset_by_scene.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model_2d/grasp_head.py" beforeDir="false" afterPath="$PROJECT_DIR$/model_2d/grasp_head.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model_2d/voxel_head.py" beforeDir="false" afterPath="$PROJECT_DIR$/model_2d/voxel_head.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script/browser_mesh.py" beforeDir="false" afterPath="$PROJECT_DIR$/script/browser_mesh.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script/generate_data_parallel_amodal_grisp.py" beforeDir="false" afterPath="$PROJECT_DIR$/script/generate_data_parallel_amodal_grisp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script/process_scene_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/script/process_scene_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/simulation_amodal_grisp.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/simulation_amodal_grisp.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +71,9 @@
     <select />
   </component>
   <component name="FavoritesManager">
-    <favorites_list name="amodal_grisp" />
+    <favorites_list name="amodal_grisp">
+      <favorite_root url="file://D:/Pycharm/system/remote_sources/-482495115/594932289/mmdet/models/detectors/two_stage.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+    </favorites_list>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -40,6 +87,9 @@
   </component>
   <component name="JupyterTrust" id="6e9773d9-3841-4670-818c-a9b324e02cf0" />
   <component name="ProjectId" id="24xKQ7ZZ608hireUadFDB6VMEsG" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -64,14 +114,14 @@
       <recent name="G:\project\amodal_grisp\beiyong" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="G:\project\amodal_grisp\config" />
-      <recent name="G:\project\amodal_grisp\tools" />
-      <recent name="G:\project\amodal_grisp\model_2d\utils" />
-      <recent name="G:\project\amodal_grisp\test" />
-      <recent name="G:\project\amodal_grisp\model_2d" />
+      <recent name="G:\project\amodal_grasp\model" />
+      <recent name="G:\project\amodal_grasp\beiyong" />
+      <recent name="G:\project\amodal_grasp\config" />
+      <recent name="G:\project\amodal_grasp\model_2d" />
+      <recent name="G:\project\amodal_grasp\test" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.train_meshrcnn">
+  <component name="RunManager" selected="Python.test_model">
     <configuration name="add_mesh_info_to_processed_scene" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="amodal_grisp" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -87,6 +137,50 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/script/add_mesh_info_to_processed_scene.py" />
       <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="add_pc_normals" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="amodal_grisp" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/script/giga" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/script/giga/add_pc_normals.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="clean_balance_data" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="amodal_grisp" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/script" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/script/clean_balance_data.py" />
+      <option name="PARAMETERS" value="/disk1/data/giga/data_packed_train_raw/" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -161,7 +255,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="dataset_2d" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+    <configuration name="dataset_by_scene (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="amodal_grisp" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -174,7 +268,29 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/model_2d/dataset_2d.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/model_2d/dataset_by_scene.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="dataset_by_scene" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="amodal_grisp" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/model_2d" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="G:\project\amodal_grasp\model_2d\dataset_by_scene.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -329,7 +445,29 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/script/generate_data_parallel_amodal_grisp.py" />
-      <option name="PARAMETERS" value="--obj_model_dir /disk3/data/amodal_grasp/obj_models_new --save_dir /disk3/data/amodal_grasp/packed_raw --num-grasps 120 --scene pile --num-grasp 1000000 --num-proc 40 --save-scene" />
+      <option name="PARAMETERS" value="--obj_model_dir /disk1/data/amodal_grasp/obj_models_new/train --save_dir /disk1/data/amodal_grasp/packed_raw --num-grasps 120 --scene pile --num-grasp 1200000 --num-proc 40 --save-scene" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="generate_data_parallel_amodal_grisp_debug" type="PythonConfigurationType" factoryName="Python">
+      <module name="amodal_grisp" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/script/generate_data_parallel_amodal_grisp.py" />
+      <option name="PARAMETERS" value="--obj_model_dir /disk1/data/amodal_grasp/obj_models_new/train --save_dir /disk1/data/amodal_grasp/packed_raw --num-grasps 120 --scene pile --num-grasp 1200000 --num-proc 40 --save-scene" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -359,29 +497,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="meshrcnn_roi_head" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="amodal_grisp" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/model_2d" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/model_2d/meshrcnn_roi_head.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pix3d_dataset" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="pix3d_dataset" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="amodal_grisp" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -397,28 +513,6 @@
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/model_2d/pix3d_dataset.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="process_mesh_info" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="amodal_grisp" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/script" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/script/process_mesh_info.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
@@ -463,7 +557,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/script/process_scene_test.py" />
-      <option name="PARAMETERS" value="/hddisk2/data/hanyang/amodel_dataset/data_test --num-proc 40" />
+      <option name="PARAMETERS" value="/disk1/data/amodal_grasp/packed_raw --num-proc 1" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -494,6 +588,52 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="project_grasp" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="amodal_grisp" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DISPLAY" value="localhost:10.0" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/script/giga" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/script/giga/project_grasp.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="project_single" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="amodal_grisp" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DISPLAY" value="localhost:10.0" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/script/giga" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/script/giga/project_single.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="save_occ_data_parallel" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="amodal_grisp" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -516,22 +656,23 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="standard_roi_head" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="amodal_grisp" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DISPLAY" value="localhost:10.0" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="D:/Pycharm/system/remote_sources/-482495115/594932289/mmdet/models/roi_heads" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="D:/Pycharm/system/remote_sources/-482495115/594932289/mmdet/models/roi_heads/standard_roi_head.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/test.py" />
       <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
@@ -582,7 +723,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test_cubify" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="test_dataset_by_scene" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="amodal_grisp" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -595,7 +736,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/test_cubify.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/test_dataset_by_scene.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -685,7 +826,7 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/test_model.py" />
       <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
@@ -841,8 +982,30 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="G:\project\amodal_grisp\tools\train.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tools/train.py" />
       <option name="PARAMETERS" value="config/amodal_grasp_r50_fpn_1x.py   --no-validate --gpu-ids 0" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="train_by_grasp" type="PythonConfigurationType" factoryName="Python">
+      <module name="amodal_grisp" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tools/train.py" />
+      <option name="PARAMETERS" value="config/amodal_grasp_r50_fpn_1x_by_grasp.py   --no-validate --gpu-ids 0" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -916,6 +1079,50 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="train_only_grasp" type="PythonConfigurationType" factoryName="Python">
+      <module name="amodal_grisp" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tools/train.py" />
+      <option name="PARAMETERS" value="config/amodal_grasp_only_grasp_cfg.py   --no-validate --gpu-id 1" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="train_only_grasp_no_mmdet" type="PythonConfigurationType" factoryName="Python">
+      <module name="amodal_grisp" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tools/train.py" />
+      <option name="PARAMETERS" value="config/amodal_grasp_only_grasp_no_mmdet_cfg.py   --no-validate --gpu-id 1" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="train_test" type="PythonConfigurationType" factoryName="Python">
       <module name="amodal_grisp" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -939,13 +1146,14 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.clean_balance_data" />
       <item itemvalue="Python.test_coco" />
       <item itemvalue="Python.test_evaluation" />
       <item itemvalue="Python.convonet_setup" />
       <item itemvalue="Python.dataset" />
-      <item itemvalue="Python.dataset_2d" />
       <item itemvalue="Python.extract_mesh_with_texture" />
       <item itemvalue="Python.generate_data_parallel_amodal_grisp" />
+      <item itemvalue="Python.generate_data_parallel_amodal_grisp_debug" />
       <item itemvalue="Python.grip_head" />
       <item itemvalue="Python.process_scene" />
       <item itemvalue="Python.process_scene_test" />
@@ -962,6 +1170,9 @@
       <item itemvalue="Python.test_pix3d_dataset_coco" />
       <item itemvalue="Python.test_raw" />
       <item itemvalue="Python.train" />
+      <item itemvalue="Python.train_only_grasp" />
+      <item itemvalue="Python.train_only_grasp_no_mmdet" />
+      <item itemvalue="Python.train_by_grasp" />
       <item itemvalue="Python.train_maskrcnn" />
       <item itemvalue="Python.train_maskrcnn_pix3d" />
       <item itemvalue="Python.train_meshrcnn" />
@@ -973,20 +1184,35 @@
       <item itemvalue="Python.eval_maskrcnn" />
       <item itemvalue="Python.add_mesh_info_to_processed_scene" />
       <item itemvalue="Python.pix3d_dataset" />
-      <item itemvalue="Python.process_mesh_info" />
-      <item itemvalue="Python.test_cubify" />
-      <item itemvalue="Python.meshrcnn_roi_head" />
-      <item itemvalue="Python.standard_roi_head" />
+      <item itemvalue="Python.dataset_by_scene" />
+      <item itemvalue="Python.project_grasp" />
+      <item itemvalue="Python.test" />
+      <item itemvalue="Python.add_pc_normals" />
+      <item itemvalue="Python.project_single" />
+      <item itemvalue="Python.dataset_by_scene (1)" />
+      <item itemvalue="Python.test_dataset_by_scene" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.standard_roi_head" />
-        <item itemvalue="Python.meshrcnn_roi_head" />
-        <item itemvalue="Python.test_cubify" />
-        <item itemvalue="Python.pix3d_dataset" />
-        <item itemvalue="Python.process_mesh_info" />
+        <item itemvalue="Python.test_dataset_by_scene" />
+        <item itemvalue="Python.dataset_by_scene (1)" />
+        <item itemvalue="Python.add_pc_normals" />
+        <item itemvalue="Python.project_single" />
+        <item itemvalue="Python.test" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -1068,18 +1294,83 @@
       <workItem from="1650595497378" duration="7014000" />
       <workItem from="1650602830635" duration="5565000" />
       <workItem from="1650683763517" duration="426000" />
-      <workItem from="1650685430426" duration="24000" />
+      <workItem from="1650685430426" duration="671000" />
+      <workItem from="1652001577581" duration="133000" />
+      <workItem from="1652001730899" duration="2650000" />
+      <workItem from="1652063362753" duration="180000" />
+      <workItem from="1652064125422" duration="174000" />
+      <workItem from="1652067244650" duration="213000" />
+      <workItem from="1652068109151" duration="9212000" />
+      <workItem from="1652101927029" duration="707000" />
+      <workItem from="1652176065420" duration="978000" />
+      <workItem from="1652177782200" duration="3115000" />
+      <workItem from="1652238188997" duration="19492000" />
+      <workItem from="1652324387852" duration="9874000" />
+      <workItem from="1652343006789" duration="9956000" />
+      <workItem from="1652366818322" duration="2377000" />
+      <workItem from="1652411993453" duration="31749000" />
+      <workItem from="1652495934527" duration="595000" />
+      <workItem from="1652521576184" duration="18797000" />
+      <workItem from="1652667015111" duration="4964000" />
+      <workItem from="1652675682314" duration="1056000" />
+      <workItem from="1652678397385" duration="8673000" />
+      <workItem from="1652758413763" duration="29965000" />
+      <workItem from="1652839064982" duration="34313000" />
+      <workItem from="1652926677237" duration="12271000" />
+      <workItem from="1652942907838" duration="11813000" />
+      <workItem from="1653007598483" duration="13804000" />
+      <workItem from="1653272175623" duration="13099000" />
+      <workItem from="1653384828803" duration="6987000" />
+      <workItem from="1653445176512" duration="3382000" />
+      <workItem from="1653453752052" duration="13197000" />
+      <workItem from="1653490202299" duration="4633000" />
+      <workItem from="1653534593204" duration="17582000" />
+      <workItem from="1653616360360" duration="7947000" />
+      <workItem from="1653652404093" duration="997000" />
+      <workItem from="1653706004257" duration="6123000" />
+      <workItem from="1653790084800" duration="7847000" />
+      <workItem from="1653876605755" duration="2431000" />
+      <workItem from="1654235757402" duration="4604000" />
+      <workItem from="1654310427657" duration="4231000" />
+      <workItem from="1654354434957" duration="570000" />
+      <workItem from="1654396922701" duration="599000" />
+      <workItem from="1654407909037" duration="2814000" />
+      <workItem from="1655024610214" duration="1427000" />
+      <workItem from="1655084148198" duration="2694000" />
+      <workItem from="1655110194654" duration="16000" />
+      <workItem from="1655111134420" duration="2746000" />
+      <workItem from="1655265449317" duration="1856000" />
+      <workItem from="1655342835317" duration="596000" />
     </task>
+    <task id="LOCAL-00001" summary="update">
+      <created>1650685482641</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1650685482641</updated>
+    </task>
+    <task id="LOCAL-00002" summary="update">
+      <created>1650685498295</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1650685498295</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="361" y="74" key="#Deployment" timestamp="1650504377935">
+    <state x="361" y="74" key="#Deployment" timestamp="1652176160912">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="74" key="#Deployment/0.0.1536.824@0.0.1536.824" timestamp="1650504377935" />
+    <state x="361" y="74" key="#Deployment/0.0.1536.824@0.0.1536.824" timestamp="1652176160912" />
     <state x="535" y="159" width="589" height="505" key="#Docker" timestamp="1648453323807">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -1088,110 +1379,138 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="74" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1650349478394" />
-    <state x="34" y="32" width="1378" height="762" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1650620687819">
+    <state x="-100" y="62" width="1378" height="762" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1653640002219">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="34" y="32" width="1378" height="762" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1650620687819" />
+    <state x="-100" y="62" width="1378" height="762" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1653640002219" />
     <state x="494" y="221" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1649330002864">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="494" y="221" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1649330002864" />
-    <state x="610" y="311" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog" timestamp="1650506302410">
+    <state x="504" y="118" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1652352025041">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="610" y="311" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog/0.0.1536.824@0.0.1536.824" timestamp="1650506302410" />
-    <state x="370" y="10" key="CommitChangelistDialog2" timestamp="1650685497650">
+    <state x="504" y="118" key="#com.intellij.ide.macro.MacrosDialog/0.0.1536.824@0.0.1536.824" timestamp="1652352025041" />
+    <state x="499" y="162" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1654417744422">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="370" y="10" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1650685497650" />
-    <state width="755" height="466" key="DebuggerActiveHint" timestamp="1650598458114">
+    <state x="499" y="162" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1654417744421" />
+    <state x="610" y="311" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog" timestamp="1652673174368">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="755" height="466" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1650598458114" />
+    <state x="610" y="311" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog/0.0.1536.824@0.0.1536.824" timestamp="1652673174368" />
+    <state x="370" y="10" key="CommitChangelistDialog2" timestamp="1655103482321">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="370" y="10" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1655103482321" />
+    <state width="859" height="466" key="DebuggerActiveHint" timestamp="1652770307620">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="859" height="466" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1652770307620" />
+    <state x="164" y="65" key="DiffContextDialog" timestamp="1655103481519">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="164" y="65" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1655103481519" />
     <state x="582" y="189" key="EnvironmentVariablesDialog" timestamp="1650528255331">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="582" y="189" key="EnvironmentVariablesDialog/0.0.1536.824@0.0.1536.824" timestamp="1650528255331" />
-    <state x="549" y="170" key="FileChooserDialogImpl" timestamp="1650602891103">
+    <state x="546" y="56" key="FileChooserDialogImpl" timestamp="1654407926786">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1650602891103" />
-    <state width="1493" height="536" key="GridCell.Tab.0.bottom" timestamp="1650621214434">
+    <state x="546" y="56" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1654407926786" />
+    <state width="1493" height="265" key="GridCell.Tab.-1.bottom" timestamp="1652886173468">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="536" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1650621214434" />
-    <state width="1493" height="536" key="GridCell.Tab.0.center" timestamp="1650621214434">
+    <state width="1493" height="265" key="GridCell.Tab.-1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1652886173468" />
+    <state width="1493" height="265" key="GridCell.Tab.-1.center" timestamp="1652886173468">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="536" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1650621214434" />
-    <state width="1493" height="536" key="GridCell.Tab.0.left" timestamp="1650621214434">
+    <state width="1493" height="265" key="GridCell.Tab.-1.center/0.0.1536.824@0.0.1536.824" timestamp="1652886173468" />
+    <state width="1493" height="265" key="GridCell.Tab.-1.left" timestamp="1652886173468">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="536" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1650621214434" />
-    <state width="1493" height="536" key="GridCell.Tab.0.right" timestamp="1650621214434">
+    <state width="1493" height="265" key="GridCell.Tab.-1.left/0.0.1536.824@0.0.1536.824" timestamp="1652886173468" />
+    <state width="1493" height="265" key="GridCell.Tab.-1.right" timestamp="1652886173468">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="536" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1650621214434" />
-    <state width="1493" height="265" key="GridCell.Tab.1.bottom" timestamp="1650620689965">
+    <state width="1493" height="265" key="GridCell.Tab.-1.right/0.0.1536.824@0.0.1536.824" timestamp="1652886173468" />
+    <state width="1493" height="244" key="GridCell.Tab.0.bottom" timestamp="1653651211243">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="265" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1650620689965" />
-    <state width="1493" height="265" key="GridCell.Tab.1.center" timestamp="1650620689965">
+    <state width="1493" height="244" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1653651211243" />
+    <state width="1493" height="244" key="GridCell.Tab.0.center" timestamp="1653651211243">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="265" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1650620689965" />
-    <state width="1493" height="265" key="GridCell.Tab.1.left" timestamp="1650620689965">
+    <state width="1493" height="244" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1653651211243" />
+    <state width="1493" height="244" key="GridCell.Tab.0.left" timestamp="1653651211243">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="265" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1650620689965" />
-    <state width="1493" height="265" key="GridCell.Tab.1.right" timestamp="1650620689965">
+    <state width="1493" height="244" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1653651211243" />
+    <state width="1493" height="244" key="GridCell.Tab.0.right" timestamp="1653651211243">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="265" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1650620689965" />
-    <state x="393" y="149" key="PyMappingSimpleResolveDialog" timestamp="1646208308960">
+    <state width="1493" height="244" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1653651211243" />
+    <state width="1493" height="244" key="GridCell.Tab.1.bottom" timestamp="1653651211243">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="393" y="149" key="PyMappingSimpleResolveDialog/0.0.1536.824@0.0.1536.824" timestamp="1646208308960" />
-    <state x="272" y="57" key="SettingsEditor" timestamp="1650365354578">
+    <state width="1493" height="244" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1653651211243" />
+    <state width="1493" height="244" key="GridCell.Tab.1.center" timestamp="1653651211243">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="272" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1650365354578" />
-    <state width="775" height="419" key="XDebugger.FullValuePopup" timestamp="1650429868597">
+    <state width="1493" height="244" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1653651211243" />
+    <state width="1493" height="244" key="GridCell.Tab.1.left" timestamp="1653651211243">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="775" height="419" key="XDebugger.FullValuePopup/0.0.1536.824@0.0.1536.824" timestamp="1650429868597" />
-    <state x="578" y="120" key="com.intellij.execution.console.ConsoleHistoryController$MyBrowseAction$1" timestamp="1650447081933">
+    <state width="1493" height="244" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1653651211243" />
+    <state width="1493" height="244" key="GridCell.Tab.1.right" timestamp="1653651211243">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="578" y="120" key="com.intellij.execution.console.ConsoleHistoryController$MyBrowseAction$1/0.0.1536.824@0.0.1536.824" timestamp="1650447081933" />
+    <state width="1493" height="244" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1653651211243" />
+    <state x="272" y="57" key="SettingsEditor" timestamp="1652258992309">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="272" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1652258992309" />
+    <state x="361" y="136" key="Vcs.Push.Dialog.v2" timestamp="1650685501225">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="136" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1650685501225" />
+    <state x="625" y="313" key="WebDeployment.AddServerDialog.v.1" timestamp="1652176132847">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="625" y="313" key="WebDeployment.AddServerDialog.v.1/0.0.1536.824@0.0.1536.824" timestamp="1652176132847" />
+    <state width="775" height="419" key="XDebugger.FullValuePopup" timestamp="1652886671023">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="775" height="419" key="XDebugger.FullValuePopup/0.0.1536.824@0.0.1536.824" timestamp="1652886671023" />
+    <state x="555" y="120" key="com.intellij.execution.console.ConsoleHistoryController$MyBrowseAction$1" timestamp="1653544158477">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="555" y="120" key="com.intellij.execution.console.ConsoleHistoryController$MyBrowseAction$1/0.0.1536.824@0.0.1536.824" timestamp="1653544158477" />
     <state x="413" y="30" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1650266294923">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="413" y="30" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1650266294923" />
-    <state x="564" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1650685493059">
+    <state x="564" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1653556028155">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="564" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1650685493059" />
-    <state x="271" y="148" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1650595862705">
+    <state x="564" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1653556028155" />
+    <state x="271" y="148" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1653026561880">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="271" y="148" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" timestamp="1650595862705" />
+    <state x="271" y="148" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" timestamp="1653026561880" />
     <state x="510" y="145" key="com.jetbrains.plugins.remotesdk.ui.RemoteMappingsConfiguration" timestamp="1650267370130">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="510" y="145" key="com.jetbrains.plugins.remotesdk.ui.RemoteMappingsConfiguration/0.0.1536.824@0.0.1536.824" timestamp="1650267370130" />
-    <state x="647" y="149" width="601" height="566" key="ftp.server.browser" timestamp="1650267037272">
+    <state x="647" y="149" width="601" height="566" key="ftp.server.browser" timestamp="1652176242690">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="647" y="149" width="601" height="566" key="ftp.server.browser/0.0.1536.824@0.0.1536.824" timestamp="1650267037272" />
-    <state x="636" y="317" key="publish.login" timestamp="1646272941673">
+    <state x="647" y="149" width="601" height="566" key="ftp.server.browser/0.0.1536.824@0.0.1536.824" timestamp="1652176242690" />
+    <state x="425" y="66" width="672" height="676" key="search.everywhere.popup" timestamp="1653391669518">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="636" y="317" key="publish.login/0.0.1536.824@0.0.1536.824" timestamp="1646272941673" />
-    <state x="425" y="66" width="672" height="676" key="search.everywhere.popup" timestamp="1650346793366">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="425" y="66" width="672" height="676" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1650346793366" />
+    <state x="425" y="66" width="672" height="676" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1653391669518" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1200,11 +1519,6 @@
           <url>file://$PROJECT_DIR$/script/process_scene.py</url>
           <line>180</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/script/save_occ_data_parallel.py</url>
-          <line>33</line>
-          <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/script/save_occ_data_parallel.py</url>
@@ -1218,17 +1532,17 @@
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/model_2d/amodal_grasp.py</url>
-          <line>107</line>
+          <line>85</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/model_2d/amodal_grasp.py</url>
-          <line>78</line>
+          <line>57</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/model_2d/amodal_grasp.py</url>
-          <line>89</line>
+          <line>68</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
@@ -1268,12 +1582,12 @@
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/script/generate_data_parallel_amodal_grisp.py</url>
-          <line>139</line>
+          <line>140</line>
           <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/script/generate_data_parallel_amodal_grisp.py</url>
-          <line>138</line>
+          <line>139</line>
           <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
@@ -1293,7 +1607,7 @@
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/script/generate_data_parallel_amodal_grisp.py</url>
-          <line>105</line>
+          <line>106</line>
           <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
@@ -1308,7 +1622,7 @@
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/script/process_scene_test.py</url>
-          <line>209</line>
+          <line>298</line>
           <option name="timeStamp" value="45" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
@@ -1726,10 +2040,220 @@
           <line>204</line>
           <option name="timeStamp" value="351" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+        <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/model_2d/voxel_head.py</url>
           <line>270</line>
           <option name="timeStamp" value="359" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://D:/Pycharm/system/remote_sources/-482495115/594932289/mmdet/models/detectors/two_stage.py</url>
+          <line>67</line>
+          <option name="timeStamp" value="361" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/model_2d/amodal_grasp.py</url>
+          <line>103</line>
+          <option name="timeStamp" value="365" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/model_2d/amodal_grasp_test.py</url>
+          <line>89</line>
+          <option name="timeStamp" value="366" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/model_2d/amodal_grasp_test.py</url>
+          <line>41</line>
+          <option name="timeStamp" value="367" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/script/generate_data_parallel_amodal_grisp.py</url>
+          <line>279</line>
+          <option name="timeStamp" value="371" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/script/generate_data_parallel_amodal_grisp.py</url>
+          <line>285</line>
+          <option name="timeStamp" value="372" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/model_2d/grasp_head_for_grid.py</url>
+          <line>49</line>
+          <option name="timeStamp" value="388" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/script/process_grasp_for_dataset_by_grasp.py</url>
+          <line>99</line>
+          <option name="timeStamp" value="394" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/model_2d/dataset_by_grasp.py</url>
+          <line>101</line>
+          <option name="timeStamp" value="396" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/model_2d/grasp_head_for_grid.py</url>
+          <line>37</line>
+          <option name="timeStamp" value="413" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/beiyong/grasp_head.py</url>
+          <line>184</line>
+          <option name="timeStamp" value="420" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/beiyong/grasp_head.py</url>
+          <line>177</line>
+          <option name="timeStamp" value="429" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/model_2d/grasp_head.py</url>
+          <line>199</line>
+          <option name="timeStamp" value="430" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/model_2d/grasp_head.py</url>
+          <line>187</line>
+          <option name="timeStamp" value="432" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/model_2d/grasp_head.py</url>
+          <line>183</line>
+          <option name="timeStamp" value="433" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/model_2d/grasp_head_only_grasp.py</url>
+          <line>145</line>
+          <option name="timeStamp" value="534" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/model_2d/grasp_head_only_grasp.py</url>
+          <line>144</line>
+          <option name="timeStamp" value="541" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/model_2d/grasp_head_only_grasp.py</url>
+          <line>56</line>
+          <option name="timeStamp" value="544" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/model_2d/grasp_head_only_grasp.py</url>
+          <line>55</line>
+          <option name="timeStamp" value="545" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/model_2d/grasp_head_only_grasp.py</url>
+          <line>137</line>
+          <option name="timeStamp" value="546" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/model_2d/amodal_grasp_only_grasp.py</url>
+          <line>20</line>
+          <option name="timeStamp" value="548" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/model_2d/dataset_by_grasp.py</url>
+          <line>77</line>
+          <option name="timeStamp" value="549" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://D:/Pycharm/system/remote_sources/-482495115/594932289/torchvision/models/resnet.py</url>
+          <line>241</line>
+          <option name="timeStamp" value="556" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://D:/Pycharm/system/remote_sources/-482495115/594932289/torchvision/models/detection/backbone_utils.py</url>
+          <line>115</line>
+          <option name="timeStamp" value="558" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://D:/Pycharm/system/remote_sources/-482495115/594932289/torchvision/models/detection/backbone_utils.py</url>
+          <line>43</line>
+          <option name="timeStamp" value="559" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://D:/Pycharm/system/remote_sources/-482495115/594932289/torchvision/models/detection/backbone_utils.py</url>
+          <line>35</line>
+          <option name="timeStamp" value="560" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/model_2d/amodal_grasp_only_grasp_no_mmdet.py</url>
+          <line>136</line>
+          <option name="timeStamp" value="564" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test/test.py</url>
+          <line>73</line>
+          <option name="timeStamp" value="567" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test/test.py</url>
+          <line>71</line>
+          <option name="timeStamp" value="569" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/script/giga/project_grasp.py</url>
+          <line>280</line>
+          <option name="timeStamp" value="574" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/model_2d/dataset_by_grasp.py</url>
+          <line>73</line>
+          <option name="timeStamp" value="582" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/model_2d/dataset_by_grasp.py</url>
+          <line>54</line>
+          <option name="timeStamp" value="583" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/model_2d/dataset_by_grasp.py</url>
+          <line>42</line>
+          <option name="timeStamp" value="584" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/model_2d/utils/encoder.py</url>
+          <line>71</line>
+          <option name="timeStamp" value="591" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/model_2d/amodal_grasp_only_grasp_no_mmdet.py</url>
+          <line>154</line>
+          <option name="timeStamp" value="596" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/model_2d/amodal_grasp_only_grasp_no_mmdet.py</url>
+          <line>153</line>
+          <option name="timeStamp" value="597" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/script/giga/add_pc_normals.py</url>
+          <line>21</line>
+          <option name="timeStamp" value="600" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/script/giga/project_grasp.py</url>
+          <line>261</line>
+          <option name="timeStamp" value="627" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test/test_model.py</url>
+          <line>51</line>
+          <option name="timeStamp" value="633" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/config/amodal_grasp_only_grasp_cfg.py</url>
+          <line>56</line>
+          <option name="timeStamp" value="635" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/model_2d/amodal_grasp_only_grasp_no_mmdet.py</url>
+          <line>208</line>
+          <option name="timeStamp" value="646" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test/test_model.py</url>
+          <line>46</line>
+          <option name="timeStamp" value="647" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -1742,50 +2266,75 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/amodal_grisp$eval_meshrcnn_with_show.coverage" NAME="eval_meshrcnn_with_show Coverage Results" MODIFIED="1650504548008" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/amodal_grisp$test_tsdf.coverage" NAME="test_tsdf Coverage Results" MODIFIED="1646885663069" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/amodal_grasp$project_single.coverage" NAME="project_single Coverage Results" MODIFIED="1653392845541" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/script/giga" />
+    <SUITE FILE_PATH="coverage/amodal_grasp$dataset_by_scene.coverage" NAME="dataset_by_scene Coverage Results" MODIFIED="1652426695843" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model_2d" />
     <SUITE FILE_PATH="coverage/amodal_grisp$convonet_setup.coverage" NAME="convonet_setup Coverage Results" MODIFIED="1646192130648" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/amodal_grisp$eval_maskrcnn_pix3d.coverage" NAME="eval_maskrcnn_pix3d Coverage Results" MODIFIED="1650426044187" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/amodal_grasp$test_model.coverage" NAME="test_model Coverage Results" MODIFIED="1653616730155" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/amodal_grisp$process_mesh_info.coverage" NAME="process_mesh_info Coverage Results" MODIFIED="1649497312134" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/script" />
-    <SUITE FILE_PATH="coverage/amodal_grisp$test_occ.coverage" NAME="test_occ Coverage Results" MODIFIED="1646901714871" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/amodal_grasp$setup.coverage" NAME="setup Coverage Results" MODIFIED="1652069011532" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/amodal_grasp$train_only_grasp_no_mmdet.coverage" NAME="train_only_grasp_no_mmdet Coverage Results" MODIFIED="1653616369825" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/amodal_grisp$eval_meshrcnn.coverage" NAME="eval_meshrcnn Coverage Results" MODIFIED="1650362752406" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/amodal_grasp$grasp_head_only_grasp.coverage" NAME="grasp_head_only_grasp Coverage Results" MODIFIED="1652841407665" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model_2d" />
     <SUITE FILE_PATH="coverage/amodal_grisp$test_local.coverage" NAME="test_local Coverage Results" MODIFIED="1648696359144" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/amodal_grisp$process_scene_test.coverage" NAME="process_scene_test Coverage Results" MODIFIED="1649415543062" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/script" />
+    <SUITE FILE_PATH="coverage/amodal_grasp$dataset_by_grasp.coverage" NAME="dataset_by_grasp Coverage Results" MODIFIED="1652791990260" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model_2d" />
     <SUITE FILE_PATH="coverage/amodal_grisp$save_occ_data_parallel.coverage" NAME="save_occ_data_parallel Coverage Results" MODIFIED="1646901991406" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/amodal_grisp$test_obj.coverage" NAME="test_obj Coverage Results" MODIFIED="1648269890619" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/amodal_grisp$test_pix3d_dataset.coverage" NAME="test_pix3d_dataset Coverage Results" MODIFIED="1650528656489" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
-    <SUITE FILE_PATH="coverage/amodal_grisp$eval_maskrcnn_pix3d_with_show.coverage" NAME="eval_maskrcnn_pix3d_with_show Coverage Results" MODIFIED="1650435136467" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/amodal_grisp$train_maskrcnn.coverage" NAME="train_maskrcnn Coverage Results" MODIFIED="1650358542479" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/amodal_grisp$dataset.coverage" NAME="dataset Coverage Results" MODIFIED="1644998104712" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
-    <SUITE FILE_PATH="coverage/amodal_grisp$dataset_2d.coverage" NAME="dataset_2d Coverage Results" MODIFIED="1648726616097" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model_2d" />
+    <SUITE FILE_PATH="coverage/amodal_grasp$dataset_by_scene__1_.coverage" NAME="dataset_by_scene (1) Coverage Results" MODIFIED="1653473018515" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model_2d" />
+    <SUITE FILE_PATH="coverage/amodal_grasp$train_meshrcnn.coverage" NAME="train_meshrcnn Coverage Results" MODIFIED="1652427998614" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/amodal_grisp$extract_mesh_with_texture.coverage" NAME="extract_mesh_with_texture Coverage Results" MODIFIED="1649321867308" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/script" />
-    <SUITE FILE_PATH="coverage/amodal_grisp$generate_data_parallel_amodal_grisp.coverage" NAME="generate_data_parallel_amodal_grisp Coverage Results" MODIFIED="1648271795820" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/amodal_grisp$test_meshrcnn.coverage" NAME="test_meshrcnn Coverage Results" MODIFIED="1650274447066" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/amodal_grisp$test_coco.coverage" NAME="test_coco Coverage Results" MODIFIED="1650361117685" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
-    <SUITE FILE_PATH="coverage/amodal_grisp$test_evaluation.coverage" NAME="test_evaluation Coverage Results" MODIFIED="1650530957827" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/amodal_grisp$pix3d_dataset.coverage" NAME="pix3d_dataset Coverage Results" MODIFIED="1649737794926" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model_2d" />
-    <SUITE FILE_PATH="coverage/amodal_grisp$test_grid.coverage" NAME="test_grid Coverage Results" MODIFIED="1646216200966" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
-    <SUITE FILE_PATH="coverage/amodal_grisp$standard_roi_head.coverage" NAME="standard_roi_head Coverage Results" MODIFIED="1650537382948" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/Pycharm/system/remote_sources/-482495115/594932289/mmdet/models/roi_heads" />
+    <SUITE FILE_PATH="coverage/amodal_grasp$grasp_head.coverage" NAME="grasp_head Coverage Results" MODIFIED="1652433611488" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/beiyong" />
     <SUITE FILE_PATH="coverage/amodal_grisp$convonet_setup_py.coverage" NAME="convonet_setup.py Coverage Results" MODIFIED="1648175778085" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/amodal_grisp$train.coverage" NAME="train Coverage Results" MODIFIED="1650269808071" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/amodal_grisp$voxelize_model.coverage" NAME="voxelize_model Coverage Results" MODIFIED="1649331204821" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/amodal_grisp$train_meshrcnn.coverage" NAME="train_meshrcnn Coverage Results" MODIFIED="1650621175794" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/amodal_grisp$train_test.coverage" NAME="train_test Coverage Results" MODIFIED="1649656566393" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/amodal_grisp$eval_maskrcnn.coverage" NAME="eval_maskrcnn Coverage Results" MODIFIED="1650425992362" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/amodal_grisp$test_model.coverage" NAME="test_model Coverage Results" MODIFIED="1646292163524" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/amodal_grisp$test_pix3d_dataset_coco.coverage" NAME="test_pix3d_dataset_coco Coverage Results" MODIFIED="1650429547787" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/amodal_grisp$test_raw.coverage" NAME="test_raw Coverage Results" MODIFIED="1648177826728" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/amodal_grasp$clean_balance_data.coverage" NAME="clean_balance_data Coverage Results" MODIFIED="1652771873785" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/script" />
     <SUITE FILE_PATH="coverage/amodal_grisp$meshrcnn_roi_head.coverage" NAME="meshrcnn_roi_head Coverage Results" MODIFIED="1650364589690" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model_2d" />
     <SUITE FILE_PATH="coverage/amodal_grisp$grip_head.coverage" NAME="grip_head Coverage Results" MODIFIED="1648370319831" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model_2d" />
     <SUITE FILE_PATH="coverage/amodal_grisp$headmap_head.coverage" NAME="headmap_head Coverage Results" MODIFIED="1648632914519" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model_2d" />
     <SUITE FILE_PATH="coverage/amodal_grisp$test_csv.coverage" NAME="test_csv Coverage Results" MODIFIED="1648635915651" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
-    <SUITE FILE_PATH="coverage/amodal_grisp$test_model_2d.coverage" NAME="test_model_2d Coverage Results" MODIFIED="1649321861989" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/amodal_grisp$process_scene.coverage" NAME="process_scene Coverage Results" MODIFIED="1649409896901" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/script" />
     <SUITE FILE_PATH="coverage/amodal_grisp$eval_meshrcnn_.coverage" NAME="eval_meshrcnn  Coverage Results" MODIFIED="1650353666900" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/amodal_grisp$train_maskrcnn_pix3d.coverage" NAME="train_maskrcnn_pix3d Coverage Results" MODIFIED="1650510505820" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/amodal_grisp$test_cubify.coverage" NAME="test_cubify Coverage Results" MODIFIED="1650274640562" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/amodal_grasp$test_dataset_by_grasp.coverage" NAME="test_dataset_by_grasp Coverage Results" MODIFIED="1652352002631" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/amodal_grisp$add_mesh_info_to_processed_scene.coverage" NAME="add_mesh_info_to_processed_scene Coverage Results" MODIFIED="1649409742646" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/script" />
+    <SUITE FILE_PATH="coverage/amodal_grisp$eval_meshrcnn_with_show.coverage" NAME="eval_meshrcnn_with_show Coverage Results" MODIFIED="1650504548008" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/amodal_grasp$generate_data_parallel_amodal_grisp.coverage" NAME="generate_data_parallel_amodal_grisp Coverage Results" MODIFIED="1652180232389" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/amodal_grasp$train.coverage" NAME="train Coverage Results" MODIFIED="1652530732926" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/amodal_grisp$test_tsdf.coverage" NAME="test_tsdf Coverage Results" MODIFIED="1646885663069" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/amodal_grasp$train_by_grasp.coverage" NAME="train_by_grasp Coverage Results" MODIFIED="1652367744153" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/amodal_grisp$eval_maskrcnn_pix3d.coverage" NAME="eval_maskrcnn_pix3d Coverage Results" MODIFIED="1650426044187" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/amodal_grasp$process_grasp_for_dataset_by_grasp.coverage" NAME="process_grasp_for_dataset_by_grasp Coverage Results" MODIFIED="1652332038588" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/script" />
+    <SUITE FILE_PATH="coverage/amodal_grisp$test_occ.coverage" NAME="test_occ Coverage Results" MODIFIED="1646901714871" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/amodal_grasp$train_only_grasp.coverage" NAME="train_only_grasp Coverage Results" MODIFIED="1652940346006" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/amodal_grasp$add_pc_normals.coverage" NAME="add_pc_normals Coverage Results" MODIFIED="1653392904493" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/script/giga" />
+    <SUITE FILE_PATH="coverage/amodal_grisp$test_obj.coverage" NAME="test_obj Coverage Results" MODIFIED="1648269890619" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/amodal_grisp$eval_maskrcnn_pix3d_with_show.coverage" NAME="eval_maskrcnn_pix3d_with_show Coverage Results" MODIFIED="1650435136467" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/amodal_grasp$test_dataset_by_scene.coverage" NAME="test_dataset_by_scene Coverage Results" MODIFIED="1653536320017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/amodal_grisp$train_maskrcnn.coverage" NAME="train_maskrcnn Coverage Results" MODIFIED="1650358542479" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/amodal_grisp$dataset.coverage" NAME="dataset Coverage Results" MODIFIED="1644998104712" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/amodal_grisp$dataset_2d.coverage" NAME="dataset_2d Coverage Results" MODIFIED="1648726616097" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model_2d" />
+    <SUITE FILE_PATH="coverage/amodal_grasp$test.coverage" NAME="test Coverage Results" MODIFIED="1652945939671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/amodal_grisp$generate_data_parallel_amodal_grisp.coverage" NAME="generate_data_parallel_amodal_grisp Coverage Results" MODIFIED="1648271795820" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/amodal_grasp$test_decoder.coverage" NAME="test_decoder Coverage Results" MODIFIED="1652367119356" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/amodal_grisp$test_meshrcnn.coverage" NAME="test_meshrcnn Coverage Results" MODIFIED="1650274447066" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/amodal_grisp$test_evaluation.coverage" NAME="test_evaluation Coverage Results" MODIFIED="1650530957827" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/amodal_grasp$project_grasp.coverage" NAME="project_grasp Coverage Results" MODIFIED="1653480844402" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/script/giga" />
+    <SUITE FILE_PATH="coverage/amodal_grisp$pix3d_dataset.coverage" NAME="pix3d_dataset Coverage Results" MODIFIED="1649737794926" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model_2d" />
+    <SUITE FILE_PATH="coverage/amodal_grisp$test_grid.coverage" NAME="test_grid Coverage Results" MODIFIED="1646216200966" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/amodal_grisp$standard_roi_head.coverage" NAME="standard_roi_head Coverage Results" MODIFIED="1650537382948" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/Pycharm/system/remote_sources/-482495115/594932289/mmdet/models/roi_heads" />
+    <SUITE FILE_PATH="coverage/amodal_grisp$train.coverage" NAME="train Coverage Results" MODIFIED="1650269808071" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/amodal_grasp$grasp_head_for_grid.coverage" NAME="grasp_head_for_grid Coverage Results" MODIFIED="1652421623538" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model_2d" />
+    <SUITE FILE_PATH="coverage/amodal_grisp$train_test.coverage" NAME="train_test Coverage Results" MODIFIED="1649656566393" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/amodal_grisp$test_model.coverage" NAME="test_model Coverage Results" MODIFIED="1646292163524" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/amodal_grasp$generate_data_parallel_amodal_grisp_debug.coverage" NAME="generate_data_parallel_amodal_grisp_debug Coverage Results" MODIFIED="1652180341487" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/amodal_grisp$test_raw.coverage" NAME="test_raw Coverage Results" MODIFIED="1648177826728" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/amodal_grasp$process_scene_test.coverage" NAME="process_scene_test Coverage Results" MODIFIED="1652327088550" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/script" />
+    <SUITE FILE_PATH="coverage/amodal_grisp$test_model_2d.coverage" NAME="test_model_2d Coverage Results" MODIFIED="1649321861989" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/amodal_grisp$perception.coverage" NAME="perception Coverage Results" MODIFIED="1646883931833" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
     <SUITE FILE_PATH="coverage/amodal_grisp$process_scene_test_local.coverage" NAME="process_scene_test_local Coverage Results" MODIFIED="1649410081838" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/script" />
-    <SUITE FILE_PATH="coverage/amodal_grisp$add_mesh_info_to_processed_scene.coverage" NAME="add_mesh_info_to_processed_scene Coverage Results" MODIFIED="1649409742646" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/script" />
   </component>
 </project>

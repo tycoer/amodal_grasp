@@ -1,7 +1,7 @@
 # model settings
 norm_cfg = dict(type='BN', requires_grad=False)
 model = dict(
-    type='AmodalGrasp',
+    type='Amodalgrasp',
     pretrained='torchvision://resnet50',
     backbone=dict(
         type='ResNet',
@@ -68,7 +68,7 @@ model = dict(
             num_classes=80,
             loss_mask=dict(
                 type='CrossEntropyLoss', use_mask=True, loss_weight=1.0))),
-    grasp_head=dict(type='GraspHead'),
+    grasp_head=dict(type='GripHead'),
     # model training and testing settings
     train_cfg=dict(
         rpn=dict(
@@ -127,26 +127,27 @@ model = dict(
 dataset_type = 'ConcatDataset'
 img_norm_cfg = dict(
     mean=[123.675, 116.28, 103.53], std=[58.395, 57.12, 57.375], to_rgb=True)
-    # mean=[0, 0, 0], std=[1, 1, 1], to_rgb=True)
 
 
 keys = ['img', 'gt_masks', 'gt_bboxes', 'gt_labels',
-        # heatmap
-        'gt_heatmaps',
-        # grasp_info
-        'gt_gripper_quat', 'gt_gripper_T_uv_for_hm', 'gt_gripper_width', 'gt_gripper_qual',
+        'gripper_T_uv_on_obj',
+        'gripper_quat',
+        'gripper_width',
+        'gripper_qual',
+        'gripper_T_cam_on_obj',
         ]
 
 train_pipeline = [
                   dict(type='Normalize', **img_norm_cfg),
                   dict(type='StackImgXYZ'),
                   dict(type='SimplePadding',
-                       out_shape=(640, 640)),
-                  dict(type='GenerateHM',
-                       max_heatmap_num=20,
-                       heatmap_shape=(40, 40),
-                       sigma=5
-                       ),
+                       out_shape=(320, 320)),
+                  dict(type='NormalizeGraspUV'),
+                  # dict(type='GenerateHM',
+                  #      max_heatmap_num=20,
+                  #      heatmap_shape=(40, 40),
+                  #      sigma=5
+                  #      ),
                   dict(type='WarpMask'),
                   dict(type='DefaultFormatBundle'),
                   dict(type='Collect', keys=keys,
@@ -156,12 +157,11 @@ train_pipeline = [
                                   'scale_factor',
                                   'img_norm_cfg',
                                                       ])]
-
 test_pipeline  = [
                   dict(type='Normalize', **img_norm_cfg),
                   dict(type='StackImgXYZ'),
                   dict(type='SimplePadding',
-                       out_shape=(640, 640)),
+                       out_shape=(320, 320)),
                   dict(type='Transpose', keys=['img'], order=(2, 0, 1)),
                   dict(type='ToTensor', keys=['img']),
                   dict(type='Collect', keys=['img'],
@@ -175,24 +175,24 @@ test_pipeline  = [
 
 
 
-data_root = '/disk1/data/amodal_grasp/data_test/scenes_processed'
+data_root = '/disk1/data/amodal_grasp/packed_raw'
 
 
 data = dict(
-    samples_per_gpu=2,
-    workers_per_gpu=0,
-    train=dict(type="AmodalGraspDataset",
+    samples_per_gpu=8,
+    workers_per_gpu=2,
+    train=dict(type="AmodelGraspDatasetByGrasp",
                data_root=data_root,
                pipeline=train_pipeline),
-    val=dict(type="AmodalGraspDataset",
+    val=dict(type="AmodelGraspDatasetByGrasp",
                data_root=data_root,
                pipeline=test_pipeline),
-    test=dict(type="AmodalGraspDataset",
+    test=dict(type="AmodelGraspDatasetByGrasp",
                data_root=data_root,
                pipeline=test_pipeline),
 )
 # optimizer
-optimizer = dict(type='SGD', lr=0.00001, momentum=0.9, weight_decay=0.0001)
+optimizer = dict(type='SGD', lr=0.02, momentum=0.9, weight_decay=0.0001)
 optimizer_config = dict(grad_clip=dict(max_norm=5, norm_type=2))
 # learning policy
 lr_config = dict(
@@ -200,8 +200,8 @@ lr_config = dict(
     warmup='linear',
     warmup_iters=500,
     warmup_ratio=1.0 / 3,
-    step=[8, 18, 25])
-checkpoint_config = dict(interval=1)
+    step=[6, 8])
+checkpoint_config = dict(interval=6)
 # yapf:disable
 log_config = dict(
     interval=50,
@@ -212,7 +212,7 @@ log_config = dict(
 # yapf:enable
 evaluation = dict(interval=1)
 # runtime settings
-total_epochs = 32
+total_epochs = 12
 dist_params = dict(backend='nccl')
 log_level = 'INFO'
 work_dir = './work_dirs/nocs_r50_fpn_1x'

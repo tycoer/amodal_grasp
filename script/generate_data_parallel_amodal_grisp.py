@@ -1,6 +1,7 @@
 import argparse
 from pathlib import Path
-
+import sys
+# sys.path.append('..')
 import numpy as np
 import open3d as o3d
 import scipy.signal as signal
@@ -57,14 +58,14 @@ def get_mesh_pose_list_from_world(world, object_set, exclude_plane=True):
         ################ tycoer ################
         _, verts = world.p.getMeshData(uid)
         aabb = world.p.getAABB(uid) # aabb: (bbox_x_min, bbox_y_min, bbox_z_min), (bbox_x_max, bbox_y_max, bbox_z_max)
-        # category = mesh_path.split('/')[-2]
+        category = mesh_path.split('/')[-2]
         cache = mesh_path.split('/')
         mesh_info = dict(mesh_path=mesh_path,
                          obj_name=f'{cache[-3]}/{cache[-2]}',
                          scale=scale,
                          pose=pose,
                          uid=uid,
-                         category=name,
+                         category=category,
                          aabb=aabb)
         mesh_pose_list.append(mesh_info)
     return mesh_pose_list
@@ -76,15 +77,15 @@ def write_grasp(save_dir, scene_id, grasp, label):
     if not csv_path.exists():
         create_csv(
             csv_path,
-            # ["scene_id", "qx", "qy", "qz", "qw", "x", "y", "z", "width", "label", "grispped_object_uid"],
-            ["scene_id", "qx", "qy", "qz", "qw", "x", "y", "z", "width", "label"],
+            ["scene_id", "qx", "qy", "qz", "qw", "x", "y", "z", "width", "label", "grispped_object_uid"],
+            # ["scene_id", "qx", "qy", "qz", "qw", "x", "y", "z", "width", "label"],
         )
     qx, qy, qz, qw = grasp.pose.rotation.as_quat()
     x, y, z = grasp.pose.translation
     width = grasp.width
-    # grispped_object_uid = grasp.grispped_object_uid
+    grispped_object_uid = grasp.grispped_object_uid
     append_csv(csv_path, scene_id, qx, qy, qz, qw, x, y, z, width, label,
-               # grispped_object_uid
+               grispped_object_uid
                )
 
 def write_point_cloud(save_dir, scene_id, point_cloud, name="point_clouds"):
@@ -175,7 +176,7 @@ def render_images(sim, n):
     origin = Transform(Rotation.identity(), np.r_[sim.size / 2, sim.size / 2, 0.0])
 
     extrinsics = np.empty((n, 7), np.float32)
-    depth_imgs = np.empty((n, height, width), np.float32)
+    depth_imgs = np.empty((n, height, width), dtype='float32')
 
     # tycoer
     rgb_imgs = np.empty((n, height, width, 3), np.uint8)
@@ -267,13 +268,13 @@ def evaluate_grasp_point(sim, pos, normal, num_rotations=6):
         sim.restore_state()
         candidate = Grasp(Transform(ori, pos), width=sim.gripper.max_opening_width)
         # remove 抓取成功后 是否在场景中移除被抓成功的物体
-        # outcome, width, grispped_object_uid = sim.execute_grasp(candidate, remove=False)
-        outcome, width = sim.execute_grasp(candidate, remove=False)
+        outcome, width, grispped_object_uid = sim.execute_grasp(candidate, remove=False)
+        # outcome, width = sim.execute_grasp(candidate, remove=False)
 
 
         outcomes.append(outcome)
         widths.append(width)
-        # grispped_object_uids.append(grispped_object_uid) # tycoer
+        grispped_object_uids.append(grispped_object_uid) # tycoer
     # detect mid-point of widest peak of successful yaw angles
     # TODO currently this does not properly handle periodicity
     successes = (np.asarray(outcomes) == Label.SUCCESS).astype(float)
@@ -284,12 +285,12 @@ def evaluate_grasp_point(sim, pos, normal, num_rotations=6):
         idx_of_widest_peak = peaks[np.argmax(properties["widths"])] - 1
         ori = R * Rotation.from_euler("z", yaws[idx_of_widest_peak])
         width = widths[idx_of_widest_peak]
-        # grispped_object_uid = grispped_object_uids[idx_of_widest_peak] # tycoer
+        grispped_object_uid = grispped_object_uids[idx_of_widest_peak] # tycoer
     # tycoer
     grasp = Grasp(pose=Transform(ori, pos),
                   width=width,
                   )
-    # grasp.grispped_object_uid = grispped_object_uid
+    grasp.grispped_object_uid = grispped_object_uid
     return grasp, int(np.max(outcomes))
 
 

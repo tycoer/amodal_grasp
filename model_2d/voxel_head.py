@@ -188,7 +188,7 @@ class VoxelRCNNConvUpsampleHead(nn.Module):
     def __init__(self,
                  num_classes=9,
                  input_channels=256,
-                 num_conv=256,
+                 num_conv=4,
                  conv_dims=256,
                  num_depth=24,
                  reg_class_agnostic=True,

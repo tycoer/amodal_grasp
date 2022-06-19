@@ -16,6 +16,7 @@ class Amodalgrasp(TwoStageDetector):
                  neck=None,
                  init_cfg=None,
                  grasp_head=None,
+                 **kwargs
                  ):
         super().__init__(
                  backbone=backbone,
@@ -42,38 +43,16 @@ class Amodalgrasp(TwoStageDetector):
         #     self.with_reconstruction_head = False
         #     self.reconstruction_head = reconstruction_head
 
-        self.init_bridge_layers()
-
-    def init_bridge_layers(self):
-        self.conv_bridge = torch.nn.Conv2d(1024, 40, (1, 1))
-
-
-    def forward_bridge(self, x):
-        bz = x.shape[0]
-        x = self.conv_bridge(x)
-        x = x.reshape(bz, 1, 40, 40, 40)
-        return x
-
 
     def forward_train(self,
                       img,
                       img_metass,
                       gt_bboxes,
                       gt_labels,
-                      gt_coords, # tycoer
-                      depth=None,
+                      # gt_coords, # tycoer
                       gt_bboxes_ignore=None,
                       gt_masks=None,
                       proposals=None,
-                      #grasp_head
-                      voxel_grid=None,
-                      graspper_T=None,
-                      occ_points=None,
-                      gt_width=None ,
-                      gt_qual=None,
-                      gt_rotations=None,
-                      gt_occ=None,
-
                       **kwargs
                       ):
 
@@ -99,26 +78,23 @@ class Amodalgrasp(TwoStageDetector):
 
         roi_losses = self.roi_head.forward_train(x, img_metass, proposal_list,
                                                  gt_bboxes, gt_labels,
-                                                 gt_coords, # tycoer
+                                                 # gt_coords, # tycoer
                                                  gt_bboxes_ignore, gt_masks,
                                                  **kwargs)
         losses.update(roi_losses)
 
-        # gt_labels = [i.long() for i in  gt_labels]
 
         if self.with_grasp_head:
-            x = self.forward_bridge(x_backbone[2]) # x shape (bz, 1, 40, 40, 40)
-            voxel_grid = voxel_grid.unsqueeze(1) # voxel_grid shape (bz, 1, 40, 40, 40)
-            voxel_grid_features = torch.cat((x, voxel_grid), dim=1) # x shape (bz, 2, 40, 40, 40)
-            loss_grasp = self.grasp_head.forward_train(voxel_grid_features=voxel_grid_features,
-                                                     graspper_T=graspper_T,
-                                                     occ_points=occ_points,
-                                                     gt_width=gt_width,
-                                                     gt_qual=gt_qual,
-                                                     gt_rotation=gt_rotations,
-                                                     gt_occ=gt_occ,
-                                                     )
-            losses.update(loss_grasp)
+            xyz = img[:, 3:]
+            grasp_losses = self.grasp_head.forward_train(x_backbone[0],
+                                                         # xyz,
+                                                         gt_heatmap=kwargs['gt_heatmaps'],
+                                                         gt_qual=kwargs['gt_gripper_qual'],
+                                                         gt_quat=kwargs['gt_gripper_quat'],
+                                                         gt_width=kwargs['gt_gripper_width'],
+                                                         gt_valid_index=kwargs['gt_gripper_valid_index'] if 'gt_gripper_valid_index' in kwargs else None,
+                                                         )
+            losses.update(grasp_losses)
         return losses
 
 
